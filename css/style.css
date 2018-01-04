@@ -471,9 +471,10 @@ footer {
     height: 100vh;
 }
 
-/* swiss style responsive website */
-
-.SwissStlyle {
+.SwissStlyle,
+.redesign,
+.animation,
+.pool1{
     display: flex;
     flex-direction: row;
     width: 100vw;
@@ -484,8 +485,8 @@ footer {
 /*center square with content */
 
 .square2 {
-	width: 250px;
-	height: 250px;
+	width: 300px;
+	height: 300px;
 	background: #FAFAFA;
     position: absolute;
     top:0;
@@ -495,7 +496,8 @@ footer {
     margin: auto;
     transform: rotate(45deg);
 }
-.responsive-webpage2 {
+.responsive-webpage2,
+.redesign-webpage2{
     z-index: 800;
     width: 270px;
     height: 80px;
@@ -507,91 +509,52 @@ footer {
     margin: auto;
     transform: rotate(315deg);
 }
+
+/*side squares*/
+
 .square3{
-    width: 150px;
-	height: 150px;
+    width: 200px;
+	height: 200px;
 	background: #FAFAFA;
     position: absolute;
     top:0;
     bottom: 10%;
-    left:60%;
+    left:55%;
     right:0;
     margin: auto;
     transform: rotate(315deg);
 }
 .square4{
-    width: 150px;
-	height: 150px;
+    width: 200px;
+	height: 200px;
 	background: #FAFAFA;
     position: absolute;
     top:0;
     bottom: 10%;
     left:0;
-    right:60%;
+    right:55%;
     margin: auto;
     transform: rotate(315deg);
 }
-
-/* Hodgson's redesign website */
-
-.redesign {
-    display: flex;
-    flex-direction: row;
-    width: 100vw;
-    height: 100vh;
-    position: relative;
+/*text in the left and right square*/
+.styleTile h2,
+.logoDev h2
+{
+    padding: 2px;
 }
 
-/*center square with content */
-
-.square5 {
-	width: 250px;
-	height: 250px;
-	background: #FAFAFA;
+.redesign-webpage2 img {
+    max-height: 220px;
     position: absolute;
     top:0;
-    bottom: 0;
     left:0;
-    right:0;
-    margin: auto;
-    transform: rotate(45deg);
-}
-.redesign-webpage2 {
-    z-index: 800;
-    width: 270px;
-    height: 80px;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
     right: 0;
+    bottom: 0;
     margin: auto;
-    transform: rotate(315deg);
 }
-.square6{
-    width: 150px;
-	height: 150px;
-	background: #FAFAFA;
-    position: absolute;
-    top:0;
-    bottom: 10%;
-    left:60%;
-    right:0;
-    margin: auto;
-    transform: rotate(315deg);
-}
-.square7{
-    width: 150px;
-	height: 150px;
-	background: #FAFAFA;
-    position: absolute;
-    top:0;
-    bottom: 10%;
-    left:0;
-    right:60%;
-    margin: auto;
-    transform: rotate(315deg);
-}
+
+
+
 
 
 
