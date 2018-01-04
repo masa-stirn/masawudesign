@@ -5,6 +5,10 @@
 
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900');
 
+body {
+    width: 100vw;
+}
+
 h1, h2, h3 {
     font-family: Roboto, sans-serif;
 }
@@ -127,7 +131,7 @@ margin: 1px;
     transform: rotate(45deg);
 }
 
-.arrows {
+.arrows, .main-content {
     width: 400px;
     height: 300px;
     position: absolute;
@@ -137,6 +141,14 @@ margin: 1px;
     right: 0;
     margin: auto;
     transform: rotate(135deg);
+}
+
+.arrows {
+    z-index: 2000;
+}
+
+.main-content {
+    transform: rotate(315deg);
 }
 
 .arrow-right{
@@ -177,6 +189,61 @@ margin: 1px;
     opacity: 0;
     animation: reveal 0.5s forwards;
 }
+
+.responsive-webpage,
+.redesigned-webpage,
+.interactive-animation,
+.project-pool-1,
+.project-pool-2,
+.basic-animation,
+.basic-ux,
+.basic-video
+{
+    z-index: 800;
+    width: 300px;
+    height: 60px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.redesigned-webpage {
+    height: 150px;
+}
+
+.interactive-animation {
+    width: 100px;
+    height: 200px;
+}
+
+.project-pool-1,
+.project-pool-2,
+.basic-ux
+{
+    width: 200px;
+    height: 200px;
+}
+
+.project-pool-2 img {
+    max-width: 210px;
+}
+
+.basic-animation {
+    width: 280px;
+    height: 220px;
+}
+.basic-ux img {
+    max-width: 200px;
+}
+
+.basic-video {
+    width : 180px;
+    height: 180px;
+}
+
 
 footer {
     position: absolute;
