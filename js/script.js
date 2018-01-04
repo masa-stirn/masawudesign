@@ -28,7 +28,7 @@ function changeColor() {
         }
     }
 
-    function colorStop() {
+function colorStop() {
             dots[0].classList.remove("s4");
             dots[1].classList.remove("s4");
             dots[2].classList.remove("s4");
@@ -59,7 +59,7 @@ masaWuDesign.addEventListener("animationend", shrink)
         }
 
 
-var slideIndex = 2;
+var slideIndex = 1;
 showDivs(slideIndex);
 
 function plusDivs(n) {
@@ -79,11 +79,5 @@ function showDivs(n) {
   for (i = 0; i < x.length; i++) {
      x[i].style.display = "none";
   }
-  for (i = 0; i < arr.length; i++) {
-     /*arr[i].className = */arr[i].className.replace(" active", "");
-  }
 x[slideIndex-1].style.display = "block";
-arr[slideIndex-1].className += " active";
 }
-
-
