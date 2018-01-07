@@ -1371,7 +1371,10 @@ function StopAni2about() {
     fa19[13].classList.add("op0"); }
 };
 
-/*let freeze = document.querySelectorAll(".freeze");
+/*
+//font awesome iocons dissapear on text hover//
+
+let freeze = document.querySelectorAll(".freeze");
 
 freeze[0].addEventListener('mouseenter', opacity0);
 freeze[0].addEventListener('mouseleave', opacity1);
