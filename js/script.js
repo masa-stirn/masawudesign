@@ -92,7 +92,8 @@ function showDivs(n) {
 x[slideIndex-1].style.display = "block";
 }
 
-//automatic slide show projects//
+//automatic slide show projects front page//
+
 var myIndex = 0;
 carousel();
 
@@ -112,7 +113,7 @@ function myFunction() {
     alert("In order to visit the webpage please enter the following Username: keammd and Password: code_2017");
 }
 
-//Contact me letter animation//
+//Contact me text animation//
 let c4 = document.getElementById("c4");
 let o4 = document.getElementById("o4");
 let n4 = document.getElementById("n4");
@@ -249,7 +250,7 @@ about.addEventListener("transitionend",typeWriter);
 
 var i = 0;
 var txt = '“Good design is obvious. Great design is transparent.” Joe Sparano';
-var speed = 50;
+var speed = 40;
 
 function typeWriter() {
   if (i < txt.length) {
@@ -376,4 +377,304 @@ function typeWriter10() {
   }
 }
 
+// floating shapes animation inside square 3 and 4//
+let fa3 = document.querySelectorAll(".fa3");
+let fa2 = document.querySelectorAll(".fa2");
+let fa4 = document.querySelectorAll(".fa4");
+let fa5 = document.querySelectorAll(".fa5");
+let square3 = document.querySelector(".square3");
+let square4 = document.querySelector(".square4");
+let activateScale4 = 0;
+let activateScale5 = 0;
+let activateScale6 = 0;
+let activateScale7 = 0;
+let activateScale8 = 0;
+let activateScale9 = 0;
+
+//window.onload = float();
+swiss.addEventListener("transitionend",float);
+
+function float() {
+    fa3[0].classList.add("anime-me2");
+    fa3[1].classList.add("anime-me3");
+    fa3[2].classList.add("anime-me4");
+    fa3[3].classList.add("anime-me");
+    fa3[4].classList.add("anime-me2");
+    fa3[5].classList.add("anime-me3");
+    fa3[6].classList.add("anime-me5");
+    fa3[7].classList.add("anime-me");
+    fa3[8].classList.add("anime-me4");
+    fa3[9].classList.add("anime-me3");
+    fa3[10].classList.add("anime-me5");
+    fa3[11].classList.add("anime-me");
+    fa3[12].classList.add("anime-me2");
+    fa3[13].classList.add("anime-me5");
+    fa2[0].classList.add("anime-me2");
+    fa2[1].classList.add("anime-me3");
+    fa2[2].classList.add("anime-me4");
+    fa2[3].classList.add("anime-me");
+    fa2[4].classList.add("anime-me2");
+    fa2[5].classList.add("anime-me3");
+    fa2[6].classList.add("anime-me5");
+    fa2[7].classList.add("anime-me");
+    fa2[8].classList.add("anime-me4");
+    fa2[9].classList.add("anime-me3");
+    fa2[10].classList.add("anime-me5");
+    fa2[11].classList.add("anime-me");
+    fa2[12].classList.add("anime-me2");
+    fa2[13].classList.add("anime-me5");
+
+square3.addEventListener('mouseenter', playAni);
+square3.addEventListener('mouseleave', StopAni);
+square4.addEventListener('mouseenter', playAni2);
+square4.addEventListener('mouseleave', StopAni2);
+
+
+function playAni() {
+        if (activateScale4 == 0) {
+    fa3[0].classList.remove("op0");
+    fa3[1].classList.remove("op0");
+    fa3[2].classList.remove("op0");
+    fa3[3].classList.remove("op0");
+    fa3[4].classList.remove("op0");
+    fa3[5].classList.remove("op0");
+    fa3[6].classList.remove("op0");
+    fa3[7].classList.remove("op0");
+    fa3[8].classList.remove("op0");
+    fa3[9].classList.remove("op0");
+    fa3[10].classList.remove("op0");
+    fa3[11].classList.remove("op0");
+    fa3[12].classList.remove("op0");
+    fa3[13].classList.remove("op0"); }
+        }
+function StopAni() {
+    fa3[0].classList.add("op0");
+    fa3[1].classList.add("op0");
+    fa3[2].classList.add("op0");
+    fa3[3].classList.add("op0");
+    fa3[4].classList.add("op0");
+    fa3[5].classList.add("op0");
+    fa3[6].classList.add("op0");
+    fa3[7].classList.add("op0");
+    fa3[8].classList.add("op0");
+    fa3[9].classList.add("op0");
+    fa3[10].classList.add("op0");
+    fa3[11].classList.add("op0");
+    fa3[12].classList.add("op0");
+    fa3[13].classList.add("op0"); }
+
+function playAni2() {
+        if (activateScale5 == 0) {
+    fa2[0].classList.remove("op0");
+    fa2[1].classList.remove("op0");
+    fa2[2].classList.remove("op0");
+    fa2[3].classList.remove("op0");
+    fa2[4].classList.remove("op0");
+    fa2[5].classList.remove("op0");
+    fa2[6].classList.remove("op0");
+    fa2[7].classList.remove("op0");
+    fa2[8].classList.remove("op0");
+    fa2[9].classList.remove("op0");
+    fa2[10].classList.remove("op0");
+    fa2[11].classList.remove("op0");
+    fa2[12].classList.remove("op0");
+    fa2[13].classList.remove("op0"); }
+        }
+function StopAni2() {
+    fa2[0].classList.add("op0");
+    fa2[1].classList.add("op0");
+    fa2[2].classList.add("op0");
+    fa2[3].classList.add("op0");
+    fa2[4].classList.add("op0");
+    fa2[5].classList.add("op0");
+    fa2[6].classList.add("op0");
+    fa2[7].classList.add("op0");
+    fa2[8].classList.add("op0");
+    fa2[9].classList.add("op0");
+    fa2[10].classList.add("op0");
+    fa2[11].classList.add("op0");
+    fa2[12].classList.add("op0");
+    fa2[13].classList.add("op0"); }
+};
+
+redesign.addEventListener("transitionend",float2);
+function float2() {
+    fa5[0].classList.add("anime-me2");
+    fa5[1].classList.add("anime-me3");
+    fa5[2].classList.add("anime-me4");
+    fa5[3].classList.add("anime-me");
+    fa5[4].classList.add("anime-me2");
+    fa5[5].classList.add("anime-me3");
+    fa5[6].classList.add("anime-me5");
+    fa5[7].classList.add("anime-me");
+    fa5[8].classList.add("anime-me4");
+    fa5[9].classList.add("anime-me3");
+    fa5[10].classList.add("anime-me5");
+    fa5[11].classList.add("anime-me");
+    fa5[12].classList.add("anime-me2");
+    fa5[13].classList.add("anime-me5");
+    fa4[0].classList.add("anime-me2");
+    fa4[1].classList.add("anime-me3");
+    fa4[2].classList.add("anime-me4");
+    fa4[3].classList.add("anime-me");
+    fa4[4].classList.add("anime-me2");
+    fa4[5].classList.add("anime-me3");
+    fa4[6].classList.add("anime-me5");
+    fa4[7].classList.add("anime-me");
+    fa4[8].classList.add("anime-me4");
+    fa4[9].classList.add("anime-me3");
+    fa4[10].classList.add("anime-me5");
+    fa4[11].classList.add("anime-me");
+    fa4[12].classList.add("anime-me2");
+    fa4[13].classList.add("anime-me5");
+
+let test1 = document.querySelector(".test1");
+let test2 = document.querySelector(".test2");
+test1.addEventListener('mouseenter', playAniredesign);
+test1.addEventListener('mouseleave', StopAniredesign);
+test2.addEventListener('mouseenter', playAni2redesign);
+test2.addEventListener('mouseleave', StopAni2redesign);
+
+function playAniredesign() {
+        if (activateScale8 == 0) {
+            console.log("I work");
+    fa4[0].classList.remove("op0");
+    fa4[1].classList.remove("op0");
+    fa4[2].classList.remove("op0");
+    fa4[3].classList.remove("op0");
+    fa4[4].classList.remove("op0");
+    fa4[5].classList.remove("op0");
+    fa4[6].classList.remove("op0");
+    fa4[7].classList.remove("op0");
+    fa4[8].classList.remove("op0");
+    fa4[9].classList.remove("op0");
+    fa4[10].classList.remove("op0");
+    fa4[11].classList.remove("op0");
+    fa4[12].classList.remove("op0");
+    fa4[13].classList.remove("op0"); }
+        }
+function StopAniredesign() {
+    fa4[0].classList.add("op0");
+    fa4[1].classList.add("op0");
+    fa4[2].classList.add("op0");
+    fa4[3].classList.add("op0");
+    fa4[4].classList.add("op0");
+    fa4[5].classList.add("op0");
+    fa4[6].classList.add("op0");
+    fa4[7].classList.add("op0");
+    fa4[8].classList.add("op0");
+    fa4[9].classList.add("op0");
+    fa4[10].classList.add("op0");
+    fa4[11].classList.add("op0");
+    fa4[12].classList.add("op0");
+    fa4[13].classList.add("op0"); }
+function playAni2redesign() {
+        if (activateScale9 == 0) {
+    fa5[0].classList.remove("op0");
+    fa5[1].classList.remove("op0");
+    fa5[2].classList.remove("op0");
+    fa5[3].classList.remove("op0");
+    fa5[4].classList.remove("op0");
+    fa5[5].classList.remove("op0");
+    fa5[6].classList.remove("op0");
+    fa5[7].classList.remove("op0");
+    fa5[8].classList.remove("op0");
+    fa5[9].classList.remove("op0");
+    fa5[10].classList.remove("op0");
+    fa5[11].classList.remove("op0");
+    fa5[12].classList.remove("op0");
+    fa5[13].classList.remove("op0"); }
+        }
+function StopAni2redesign() {
+    fa5[0].classList.add("op0");
+    fa5[1].classList.add("op0");
+    fa5[2].classList.add("op0");
+    fa5[3].classList.add("op0");
+    fa5[4].classList.add("op0");
+    fa5[5].classList.add("op0");
+    fa5[6].classList.add("op0");
+    fa5[7].classList.add("op0");
+    fa5[8].classList.add("op0");
+    fa5[9].classList.add("op0");
+    fa5[10].classList.add("op0");
+    fa5[11].classList.add("op0");
+    fa5[12].classList.add("op0");
+    fa5[13].classList.add("op0"); }
+};
+
+let freeze = document.querySelectorAll(".freeze");
+let freeze2 = document.querySelectorAll(".freeze2");
+
+freeze[0].addEventListener('mouseenter', opacity0);
+freeze[0].addEventListener('mouseleave', opacity1);
+freeze[1].addEventListener('mouseenter', opacity0two);
+freeze[1].addEventListener('mouseleave', opacity1two);
+
+function opacity0() {
+    if (activateScale6 == 0) {
+    fa3[0].classList.add("op0");
+    fa3[1].classList.add("op0");
+    fa3[2].classList.add("op0");
+    fa3[3].classList.add("op0");
+    fa3[4].classList.add("op0");
+    fa3[5].classList.add("op0");
+    fa3[6].classList.add("op0");
+    fa3[7].classList.add("op0");
+    fa3[8].classList.add("op0");
+    fa3[9].classList.add("op0");
+    fa3[10].classList.add("op0");
+    fa3[11].classList.add("op0");
+    fa3[12].classList.add("op0");
+    fa3[13].classList.add("op0");}}
+
+function opacity0two() {
+    if (activateScale7 == 0) {
+    fa2[0].classList.add("op0");
+    fa2[1].classList.add("op0");
+    fa2[2].classList.add("op0");
+    fa2[3].classList.add("op0");
+    fa2[4].classList.add("op0");
+    fa2[5].classList.add("op0");
+    fa2[6].classList.add("op0");
+    fa2[7].classList.add("op0");
+    fa2[8].classList.add("op0");
+    fa2[9].classList.add("op0");
+    fa2[10].classList.add("op0");
+    fa2[11].classList.add("op0");
+    fa2[12].classList.add("op0");
+    fa2[13].classList.add("op0"); }
+        }
+
+function opacity1() {
+    console.log("working")
+    fa3[0].classList.remove("op0");
+    fa3[1].classList.remove("op0");
+    fa3[2].classList.remove("op0");
+    fa3[3].classList.remove("op0");
+    fa3[4].classList.remove("op0");
+    fa3[5].classList.remove("op0");
+    fa3[6].classList.remove("op0");
+    fa3[7].classList.remove("op0");
+    fa3[8].classList.remove("op0");
+    fa3[9].classList.remove("op0");
+    fa3[10].classList.remove("op0");
+    fa3[11].classList.remove("op0");
+    fa3[12].classList.remove("op0");
+    fa3[13].classList.remove("op0");}
+
+function opacity1two() {
+    fa2[0].classList.remove("op0");
+    fa2[1].classList.remove("op0");
+    fa2[2].classList.remove("op0");
+    fa2[3].classList.remove("op0");
+    fa2[4].classList.remove("op0");
+    fa2[5].classList.remove("op0");
+    fa2[6].classList.remove("op0");
+    fa2[7].classList.remove("op0");
+    fa2[8].classList.remove("op0");
+    fa2[9].classList.remove("op0");
+    fa2[10].classList.remove("op0");
+    fa2[11].classList.remove("op0");
+    fa2[12].classList.remove("op0");
+    fa2[13].classList.remove("op0"); }
 
