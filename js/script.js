@@ -9,63 +9,43 @@ var dots = document.querySelectorAll(".s");
 var s4 = document.querySelector(".s4");
 var menuBox = document.querySelector(".menu-box");
 
-menu.addEventListener('mouseenter', changeColor);
-menu.addEventListener('mouseleave', colorStop);
-let activateScale = 0;
 
+dots.forEach(function (dot) {
+   menu.addEventListener('mouseenter', () =>{
+        dot.classList.add("s4");
+   });
+     menu.addEventListener('mouseleave', () =>{
+        dot.classList.remove("s4");
+   });
+})
 
-function changeColor() {
-        if (activateScale == 0) {
-            dots[0].classList.add("s4");
-            dots[1].classList.add("s4");
-            dots[2].classList.add("s4");
-            dots[3].classList.add("s4");
-            dots[4].classList.add("s4");
-            dots[5].classList.add("s4");
-            dots[6].classList.add("s4");
-            dots[7].classList.add("s4");
-            dots[8].classList.add("s4");
-        }
-    }
-
-function colorStop() {
-            dots[0].classList.remove("s4");
-            dots[1].classList.remove("s4");
-            dots[2].classList.remove("s4");
-            dots[3].classList.remove("s4");
-            dots[4].classList.remove("s4");
-            dots[5].classList.remove("s4");
-            dots[6].classList.remove("s4");
-            dots[7].classList.remove("s4");
-            dots[8].classList.remove("s4");
-    }
-
-menu.addEventListener('click', openMenu);
-
-function openMenu() {
+menu.addEventListener('click', () => {
     menuBox.classList.toggle("hide");
-}
+    menuBox.addEventListener('click', () => {
+                    menuBox.classList.remove("show");
+                })
+})
 
 let slide = document.querySelector(".slide");
 let fade = document.querySelector("#fade-in");
 
-slide.addEventListener("click", function(){
-  fade.classList.toggle("show")
+slide.addEventListener("click", function () {
+    fade.classList.toggle("show")
 });
 
 //intro text writes itself //
 
 masaWuDesign.addEventListener("animationend", shrink)
 
-        function shrink() {
-            svgText.classList.add("smallUp");
-            setTimeout(function(){
-            svgText.classList.add("hide");
-            mylogo.classList.remove("hide");
-            introtext.classList.remove("hide");
-            square.classList.remove("hide");
-            }, 500);
-        }
+function shrink() {
+    svgText.classList.add("smallUp");
+    setTimeout(function () {
+        svgText.classList.add("hide");
+        mylogo.classList.remove("hide");
+        introtext.classList.remove("hide");
+        square.classList.remove("hide");
+    }, 500);
+}
 
 //intro page slide show//
 
@@ -73,27 +53,28 @@ var slideIndex = 1;
 showDivs(slideIndex);
 
 function plusDivs(n) {
-showDivs(slideIndex += n);
+    showDivs(slideIndex += n);
 }
-
 function currentDiv(n) {
-showDivs(slideIndex = n);
+    showDivs(slideIndex = n);
 }
-
 function showDivs(n) {
-  var i;
-  var x = document.getElementsByClassName("pro");
-  var arr = document.getElementsByClassName("arr");
-  if (n > x.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = x.length}
-  for (i = 0; i < x.length; i++) {
-     x[i].style.display = "none";
-  }
-x[slideIndex-1].style.display = "block";
+    var i;
+    var x = document.getElementsByClassName("pro");
+    var arr = document.getElementsByClassName("arr");
+    if (n > x.length) {
+        slideIndex = 1
+    }
+    if (n < 1) {
+        slideIndex = x.length
+    }
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+    }
+    x[slideIndex - 1].style.display = "block";
 }
 
 //automatic slide show projects front page//
-
 var myIndex = 0;
 carousel();
 
@@ -101,11 +82,13 @@ function carousel() {
     var i;
     var x = document.getElementsByClassName("pro");
     for (i = 0; i < x.length; i++) {
-       x[i].style.display = "none";
+        x[i].style.display = "none";
     }
     myIndex++;
-    if (myIndex > x.length) {myIndex = 1}
-    x[myIndex-1].style.display = "block";
+    if (myIndex > x.length) {
+        myIndex = 1
+    }
+    x[myIndex - 1].style.display = "block";
     setTimeout(carousel, 2500);
 }
 
@@ -131,250 +114,227 @@ wraplet2.addEventListener('mouseenter', aniLetter2);
 
 function aniLetter2() {
     console.log("works");
-        setTimeout(function(){
-            c4.classList.add("animate-letter");
-        }, 100);
-        setTimeout(function(){
-            o4.classList.add("animate-letter");
-        }, 200);
-        setTimeout(function(){
-            n4.classList.add("animate-letter");
-        }, 300);
-        setTimeout(function(){
-            t4.classList.add("animate-letter");
-        }, 400);
-        setTimeout(function(){
-            a4.classList.add("animate-letter");
-        }, 500);
-        setTimeout(function(){
-            c44.classList.add("animate-letter");
-        }, 600);
-        setTimeout(function(){
-            t44.classList.add("animate-letter");
-        }, 700);
-        setTimeout(function(){
-            space4.classList.add("animate-letter");
-        }, 800);
-        setTimeout(function(){
-            m4.classList.add("animate-letter");
-        }, 900);
-        setTimeout(function(){
-            e4.classList.add("animate-letter");
-        }, 1000);
+    setTimeout(function () {
+        c4.classList.add("animate-letter");
+    }, 100);
+    setTimeout(function () {
+        o4.classList.add("animate-letter");
+    }, 200);
+    setTimeout(function () {
+        n4.classList.add("animate-letter");
+    }, 300);
+    setTimeout(function () {
+        t4.classList.add("animate-letter");
+    }, 400);
+    setTimeout(function () {
+        a4.classList.add("animate-letter");
+    }, 500);
+    setTimeout(function () {
+        c44.classList.add("animate-letter");
+    }, 600);
+    setTimeout(function () {
+        t44.classList.add("animate-letter");
+    }, 700);
+    setTimeout(function () {
+        space4.classList.add("animate-letter");
+    }, 800);
+    setTimeout(function () {
+        m4.classList.add("animate-letter");
+    }, 900);
+    setTimeout(function () {
+        e4.classList.add("animate-letter");
+    }, 1000);
 
 
-       setTimeout(function(){
-            setTimeout(function(){
+    setTimeout(function () {
+        setTimeout(function () {
             c4.classList.remove("animate-letter");
         }, 100);
-        setTimeout(function(){
+        setTimeout(function () {
             o4.classList.remove("animate-letter");
         }, 200);
-        setTimeout(function(){
+        setTimeout(function () {
             n4.classList.remove("animate-letter");
         }, 300);
-        setTimeout(function(){
+        setTimeout(function () {
             t4.classList.remove("animate-letter");
         }, 400);
-        setTimeout(function(){
+        setTimeout(function () {
             a4.classList.remove("animate-letter");
         }, 500);
-        setTimeout(function(){
+        setTimeout(function () {
             c44.classList.remove("animate-letter");
         }, 600);
-        setTimeout(function(){
+        setTimeout(function () {
             t44.classList.remove("animate-letter");
         }, 700);
-        setTimeout(function(){
+        setTimeout(function () {
             space4.classList.remove("animate-letter");
         }, 800);
-        setTimeout(function(){
+        setTimeout(function () {
             m4.classList.remove("animate-letter");
         }, 900);
-        setTimeout(function(){
+        setTimeout(function () {
             e4.classList.remove("animate-letter");
         }, 1000);
-        }, 900);
-    }
+    }, 900);
+}
 
 // when hover image change the color of the text//
 
-let imgHover1 = document.getElementById("imgHover1");
+
 let linkedIn = document.getElementById("linkedIn");
-let activateScale1 = 0;
+let imgHovElm = document.querySelectorAll(".img-hover-effect");
 
-imgHover1.addEventListener("mouseenter", addGreen);
-imgHover1.addEventListener("mouseleave", removeGreen);
+    imgHovElm.forEach(function (imgH) {
+imgH.addEventListener("mouseenter", () => {
+    linkedIn.classList.add("green-me");
+    CV.classList.add("green-me");
+    takeBreak.classList.add("green-me");
+})
+    })
 
-function addGreen(){
-    if (activateScale1 == 0) {
-    linkedIn.classList.add("green-me");}
-};
-function removeGreen(){
+ imgHovElm.forEach(function (imgH) {
+imgH.addEventListener("mouseleave", () => {
     linkedIn.classList.remove("green-me");
-};
-
-let imgHover2 = document.getElementById("imgHover2");
-let CV = document.getElementById("CV");
-let activateScale2 = 0;
-
-imgHover2.addEventListener("mouseenter", addGreen2);
-imgHover2.addEventListener("mouseleave", removeGreen2);
-
-function addGreen2(){
-    if (activateScale2 == 0) {
-    CV.classList.add("green-me");}
-};
-function removeGreen2(){
     CV.classList.remove("green-me");
-};
-
-let imgHover3 = document.getElementById("imgHover3");
-let takeBreak = document.getElementById("takeBreak");
-let activateScale3 = 0;
-
-imgHover3.addEventListener("mouseenter", addGreen3);
-imgHover3.addEventListener("mouseleave", removeGreen3);
-
-function addGreen3(){
-    if (activateScale3 == 0) {
-    takeBreak.classList.add("green-me");}
-};
-function removeGreen3(){
     takeBreak.classList.remove("green-me");
-};
+})
+    })
+
+
 
 //typewriting effect//
 var about = document.getElementById("about");
-about.addEventListener("transitionend",typeWriter);
+about.addEventListener("transitionend", typeWriter);
 
 var i = 0;
 var txt = '“Good design is obvious. Great design is transparent.” Joe Sparano';
 var speed = 40;
 
 function typeWriter() {
-  if (i < txt.length) {
-    document.getElementById("demo").innerHTML += txt.charAt(i);
-    i++;
-    setTimeout(typeWriter, speed);
-  }
+    if (i < txt.length) {
+        document.getElementById("demo").innerHTML += txt.charAt(i);
+        i++;
+        setTimeout(typeWriter, speed);
+    }
 }
 
 var video = document.getElementById("video");
-video.addEventListener("transitionend",typeWriter2);
+video.addEventListener("transitionend", typeWriter2);
 var txt2 = '“Socrates said, “Know thyself.” I say, “Know thy users.” Joshua Brewer';
 var i2 = 0;
 
 function typeWriter2() {
-  if (i2 < txt2.length) {
-    document.getElementById("demo2").innerHTML += txt2.charAt(i2);
-    i2++;
-    setTimeout(typeWriter2, speed);
-  }
+    if (i2 < txt2.length) {
+        document.getElementById("demo2").innerHTML += txt2.charAt(i2);
+        i2++;
+        setTimeout(typeWriter2, speed);
+    }
 }
 
 var viewfinders = document.getElementById("viewfinders");
-viewfinders.addEventListener("transitionend",typeWriter3);
+viewfinders.addEventListener("transitionend", typeWriter3);
 var txt3 = '"There are three responses to a piece of design. Yes, no and Wow! Wow is the one to aim for."  Milton Glaser';
 var i3 = 0;
 
 function typeWriter3() {
-  if (i3 < txt3.length) {
-    document.getElementById("demo3").innerHTML += txt3.charAt(i3);
-    i3++;
-    setTimeout(typeWriter3, speed);
-  }
+    if (i3 < txt3.length) {
+        document.getElementById("demo3").innerHTML += txt3.charAt(i3);
+        i3++;
+        setTimeout(typeWriter3, speed);
+    }
 }
 
 var frank = document.getElementById("frank");
-frank.addEventListener("transitionend",typeWriter4);
+frank.addEventListener("transitionend", typeWriter4);
 var txt4 = '“Simplicity is not the goal. It is the by-product of a good idea and modest expectations.” Paul Rand';
 var i4 = 0;
 
 function typeWriter4() {
-  if (i4 < txt4.length) {
-    document.getElementById("demo4").innerHTML += txt4.charAt(i4);
-    i4++;
-    setTimeout(typeWriter4, speed);
-  }
+    if (i4 < txt4.length) {
+        document.getElementById("demo4").innerHTML += txt4.charAt(i4);
+        i4++;
+        setTimeout(typeWriter4, speed);
+    }
 }
 
 var drum = document.getElementById("drum");
-drum.addEventListener("transitionend",typeWriter5);
+drum.addEventListener("transitionend", typeWriter5);
 var txt5 = '“What works good is better that what looks good, because what works good lasts.”  Ray Eames';
 var i5 = 0;
 
 function typeWriter5() {
-  if (i5 < txt5.length) {
-    document.getElementById("demo5").innerHTML += txt5.charAt(i5);
-    i5++;
-    setTimeout(typeWriter5, speed);
-  }
+    if (i5 < txt5.length) {
+        document.getElementById("demo5").innerHTML += txt5.charAt(i5);
+        i5++;
+        setTimeout(typeWriter5, speed);
+    }
 }
 
 var menu2 = document.getElementById("menu");
-menu2.addEventListener("transitionend",typeWriter6);
+menu2.addEventListener("transitionend", typeWriter6);
 var txt6 = '“Technology may change rapidly, but people change slowly. The principals [of design] come from understanding of people. ”  D. Norman';
 var i6 = 0;
 
 function typeWriter6() {
-  if (i6 < txt6.length) {
-    document.getElementById("demo6").innerHTML += txt6.charAt(i6);
-    i6++;
-    setTimeout(typeWriter6, speed);
-  }
+    if (i6 < txt6.length) {
+        document.getElementById("demo6").innerHTML += txt6.charAt(i6);
+        i6++;
+        setTimeout(typeWriter6, speed);
+    }
 }
 
 var misschili = document.getElementById("misschili");
-misschili.addEventListener("transitionend",typeWriter7);
+misschili.addEventListener("transitionend", typeWriter7);
 var txt7 = '“User-centered design means working with your users all throughout the project.”  D. Norman';
 var i7 = 0;
 
 function typeWriter7() {
-  if (i7 < txt7.length) {
-    document.getElementById("demo7").innerHTML += txt7.charAt(i7);
-    i7++;
-    setTimeout(typeWriter7, speed);
-  }
+    if (i7 < txt7.length) {
+        document.getElementById("demo7").innerHTML += txt7.charAt(i7);
+        i7++;
+        setTimeout(typeWriter7, speed);
+    }
 }
 
 var redesign = document.getElementById("redesign");
-redesign.addEventListener("transitionend",typeWriter8);
+redesign.addEventListener("transitionend", typeWriter8);
 var txt8 = '“I strive for two things in design: simplicity and clarity. Great design is born of those two things.” L. Leader';
 var i8 = 0;
 
 function typeWriter8() {
-  if (i8 < txt8.length) {
-    document.getElementById("demo8").innerHTML += txt8.charAt(i8);
-    i8++;
-    setTimeout(typeWriter8, speed);
-  }
+    if (i8 < txt8.length) {
+        document.getElementById("demo8").innerHTML += txt8.charAt(i8);
+        i8++;
+        setTimeout(typeWriter8, speed);
+    }
 }
 
 var swiss = document.getElementById("swiss");
-swiss.addEventListener("transitionend",typeWriter9);
+swiss.addEventListener("transitionend", typeWriter9);
 var txt9 = '“Good design is the act of communication between designer and the user”  D. Norman';
 var i9 = 0;
 
 function typeWriter9() {
-  if (i9 < txt9.length) {
-    document.getElementById("demo9").innerHTML += txt9.charAt(i9);
-    i9++;
-    setTimeout(typeWriter9, speed);
-  }
+    if (i9 < txt9.length) {
+        document.getElementById("demo9").innerHTML += txt9.charAt(i9);
+        i9++;
+        setTimeout(typeWriter9, speed);
+    }
 }
 
 var home = document.getElementById("home");
-home.addEventListener("transitionend",typeWriter10);
+home.addEventListener("transitionend", typeWriter10);
 var txt10 = '“Design is a bridge between technology and people.”  D. Norman';
 var i10 = 0;
 
 function typeWriter10() {
-  if (i10 < txt10.length) {
-    document.getElementById("demo10").innerHTML += txt10.charAt(i10);
-    i10++;
-    setTimeout(typeWriter10, speed);
-  }
+    if (i10 < txt10.length) {
+        document.getElementById("demo10").innerHTML += txt10.charAt(i10);
+        i10++;
+        setTimeout(typeWriter10, speed);
+    }
 }
 
 // floating shapes animation inside square 3 and 4//
@@ -396,33 +356,134 @@ let fa16 = document.querySelectorAll(".fa16");
 let fa17 = document.querySelectorAll(".fa17");
 let fa18 = document.querySelectorAll(".fa18");
 let fa19 = document.querySelectorAll(".fa19");
-let square3 = document.querySelector(".square3");
-let square4 = document.querySelector(".square4");
-let activateScale4 = 0;
-let activateScale5 = 0;
-let activateScale6 = 0;
-let activateScale7 = 0;
-let activateScale8 = 0;
-let activateScale9 = 0;
-let activateScale10 = 0;
-let activateScale11 = 0;
-let activateScale12 = 0;
-let activateScale13 = 0;
-let activateScale14 = 0;
-let activateScale15 = 0;
-let activateScale16 = 0;
-let activateScale17 = 0;
-let activateScale18 = 0;
-let activateScale19 = 0;
-let activateScale20 = 0;
-let activateScale21 = 0;
-let activateScale22 = 0;
-let activateScale23 = 0;
+let square3 = document.querySelectorAll(".square3");
+let square4 = document.querySelectorAll(".square4");
+let test01 = document.querySelector(".test01");
+let test02 = document.querySelector(".test02");
+let hov01 = document.querySelector(".hov01");
+let hov02 = document.querySelector(".hov02");
 
-//window.onload = float();
-swiss.addEventListener("transitionend",float);
+square3.forEach(function (SquareR) {
+    SquareR.addEventListener('mouseenter', playAni);
+    SquareR.addEventListener('mouseenter', moveMyT);
+    SquareR.addEventListener('mouseleave', StopAni);
+    SquareR.addEventListener('mouseleave', moveMyTBack);
+});
+
+square4.forEach(function (SquareL) {
+    SquareL.addEventListener('mouseenter', playAni2);
+    SquareL.addEventListener('mouseenter', moveMyT2);
+    SquareL.addEventListener('mouseleave', StopAni2);
+    SquareL.addEventListener('mouseleave', moveMyTBack2);
+});
+
+//animate text in teh qruare 3,4 to transition to the right//
+let styleTile = document.querySelectorAll(".styleTile");
+let logoDev = document.querySelectorAll(".logoDev");
+let styleTile2 = document.querySelectorAll(".styleTile2");
+let styleTile3 = document.querySelectorAll(".styleTile3");
+let styleTile4 = document.querySelectorAll(".styleTile4");
+let logoDev2 = document.querySelectorAll(".logoDev2");
+let logoDev3 = document.querySelectorAll(".logoDev3");
+let logoDev4 = document.querySelectorAll(".logoDev4");
+
+function moveMyT() {
+    styleTile.forEach(function (moveMyT1) {
+        moveMyT1.classList.add("rSquareAni");
+    });
+    styleTile2.forEach(function (moveMyT19) {
+        moveMyT19.classList.add("rSquareAni");
+    });
+    styleTile3.forEach(function (moveMyT19X) {
+        moveMyT19X.classList.add("rSquareAniUx");
+    });
+    styleTile4.forEach(function (moveMyT19Vid) {
+        moveMyT19Vid.classList.add("rSquareAniVid");
+    });
+
+}
+
+function moveMyTBack() {
+    styleTile.forEach(function (moveMyTBack1) {
+        moveMyTBack1.classList.add("lSquareAni");
+        moveMyTBack1.classList.remove("rSquareAni");
+        setTimeout(function () {
+            moveMyTBack1.classList.remove("lSquareAni");
+        }, 1000);
+    });
+    styleTile2.forEach(function (moveMyTBack19) {
+        moveMyTBack19.classList.add("lSquareAni");
+        moveMyTBack19.classList.remove("rSquareAni");
+        setTimeout(function () {
+            moveMyTBack19.classList.remove("lSquareAni");
+        }, 1000);
+    });
+    styleTile3.forEach(function (moveMyTBack19X) {
+        moveMyTBack19X.classList.add("rSquareAniUxBack");
+        moveMyTBack19X.classList.remove("rSquareAniUx");
+        setTimeout(function () {
+            moveMyTBack19X.classList.remove("rSquareAniUxBack");
+        }, 1000);
+    });
+    styleTile4.forEach(function (moveMyTBack19Vid) {
+        moveMyTBack19Vid.classList.add("rSquareAniVidBack");
+        moveMyTBack19Vid.classList.remove("rSquareAniVid");
+        setTimeout(function () {
+            moveMyTBack19Vid.classList.remove("rSquareAniVidBack");
+        }, 1000);
+    });
+}
+
+function moveMyT2() {
+    logoDev.forEach(function (moveMyT02) {
+        moveMyT02.classList.add("rSquareAni");
+    });
+    logoDev2.forEach(function (moveMyT029) {
+        moveMyT029.classList.add("rSquareAni");
+    });
+    logoDev3.forEach(function (moveMyT029X) {
+        moveMyT029X.classList.add("lSquareAniX");
+    });
+    logoDev4.forEach(function (moveMyT029Cv) {
+        moveMyT029Cv.classList.add("rSquareAni");
+    });
+}
+
+function moveMyTBack2() {
+    logoDev.forEach(function (moveMyTBack02) {
+        moveMyTBack02.classList.add("lSquareAni");
+        moveMyTBack02.classList.remove("rSquareAni");
+        setTimeout(function () {
+            moveMyTBack02.classList.remove("lSquareAni");
+        }, 1000);
+    });
+    logoDev2.forEach(function (moveMyTBack029) {
+        moveMyTBack029.classList.add("lSquareAni");
+        moveMyTBack029.classList.remove("rSquareAni");
+        setTimeout(function () {
+            moveMyTBack029.classList.remove("lSquareAni");
+        }, 1000);
+    });
+    logoDev3.forEach(function (moveMyTBack029X) {
+        moveMyTBack029X.classList.add("lSquareAniXBack");
+        moveMyTBack029X.classList.remove("lSquareAniX");
+        setTimeout(function () {
+            moveMyTBack029X.classList.remove("lSquareAniXBack");
+        }, 1000);
+    });
+    logoDev4.forEach(function (moveMyTBack029Cv) {
+        moveMyTBack029Cv.classList.add("lSquareAni");
+        moveMyTBack029Cv.classList.remove("rSquareAni");
+        setTimeout(function () {
+            moveMyTBack029Cv.classList.remove("lSquareAni");
+        }, 1000);
+    });
+}
+
+window.onload = float();
 
 function float() {
+    //swiss
     fa3[0].classList.add("anime-me2");
     fa3[1].classList.add("anime-me3");
     fa3[2].classList.add("anime-me4");
@@ -451,82 +512,7 @@ function float() {
     fa2[11].classList.add("anime-me");
     fa2[12].classList.add("anime-me2");
     fa2[13].classList.add("anime-me5");
-
-square3.addEventListener('mouseenter', playAni);
-square3.addEventListener('mouseleave', StopAni);
-square4.addEventListener('mouseenter', playAni2);
-square4.addEventListener('mouseleave', StopAni2);
-
-
-function playAni() {
-        if (activateScale4 == 0) {
-    fa3[0].classList.remove("op0");
-    fa3[1].classList.remove("op0");
-    fa3[2].classList.remove("op0");
-    fa3[3].classList.remove("op0");
-    fa3[4].classList.remove("op0");
-    fa3[5].classList.remove("op0");
-    fa3[6].classList.remove("op0");
-    fa3[7].classList.remove("op0");
-    fa3[8].classList.remove("op0");
-    fa3[9].classList.remove("op0");
-    fa3[10].classList.remove("op0");
-    fa3[11].classList.remove("op0");
-    fa3[12].classList.remove("op0");
-    fa3[13].classList.remove("op0"); }
-        }
-function StopAni() {
-    fa3[0].classList.add("op0");
-    fa3[1].classList.add("op0");
-    fa3[2].classList.add("op0");
-    fa3[3].classList.add("op0");
-    fa3[4].classList.add("op0");
-    fa3[5].classList.add("op0");
-    fa3[6].classList.add("op0");
-    fa3[7].classList.add("op0");
-    fa3[8].classList.add("op0");
-    fa3[9].classList.add("op0");
-    fa3[10].classList.add("op0");
-    fa3[11].classList.add("op0");
-    fa3[12].classList.add("op0");
-    fa3[13].classList.add("op0"); }
-
-function playAni2() {
-        if (activateScale5 == 0) {
-    fa2[0].classList.remove("op0");
-    fa2[1].classList.remove("op0");
-    fa2[2].classList.remove("op0");
-    fa2[3].classList.remove("op0");
-    fa2[4].classList.remove("op0");
-    fa2[5].classList.remove("op0");
-    fa2[6].classList.remove("op0");
-    fa2[7].classList.remove("op0");
-    fa2[8].classList.remove("op0");
-    fa2[9].classList.remove("op0");
-    fa2[10].classList.remove("op0");
-    fa2[11].classList.remove("op0");
-    fa2[12].classList.remove("op0");
-    fa2[13].classList.remove("op0"); }
-        }
-function StopAni2() {
-    fa2[0].classList.add("op0");
-    fa2[1].classList.add("op0");
-    fa2[2].classList.add("op0");
-    fa2[3].classList.add("op0");
-    fa2[4].classList.add("op0");
-    fa2[5].classList.add("op0");
-    fa2[6].classList.add("op0");
-    fa2[7].classList.add("op0");
-    fa2[8].classList.add("op0");
-    fa2[9].classList.add("op0");
-    fa2[10].classList.add("op0");
-    fa2[11].classList.add("op0");
-    fa2[12].classList.add("op0");
-    fa2[13].classList.add("op0"); }
-};
-
-redesign.addEventListener("transitionend",float2);
-function float2() {
+    //redesign
     fa5[0].classList.add("anime-me2");
     fa5[1].classList.add("anime-me3");
     fa5[2].classList.add("anime-me4");
@@ -556,16 +542,27 @@ function float2() {
     fa4[12].classList.add("anime-me2");
     fa4[13].classList.add("anime-me5");
 
-let test1 = document.querySelector(".test1");
-let test2 = document.querySelector(".test2");
-test1.addEventListener('mouseenter', playAniredesign);
-test1.addEventListener('mouseleave', StopAniredesign);
-test2.addEventListener('mouseenter', playAni2redesign);
-test2.addEventListener('mouseleave', StopAni2redesign);
+};
 
-function playAniredesign() {
-        if (activateScale8 == 0) {
-            console.log("I work");
+function playAni() {
+    //swiss
+    hov01.classList.add("style");
+    fa3[0].classList.remove("op0");
+    fa3[1].classList.remove("op0");
+    fa3[2].classList.remove("op0");
+    fa3[3].classList.remove("op0");
+    fa3[4].classList.remove("op0");
+    fa3[5].classList.remove("op0");
+    fa3[6].classList.remove("op0");
+    fa3[7].classList.remove("op0");
+    fa3[8].classList.remove("op0");
+    fa3[9].classList.remove("op0");
+    fa3[10].classList.remove("op0");
+    fa3[11].classList.remove("op0");
+    fa3[12].classList.remove("op0");
+    fa3[13].classList.remove("op0");
+    //redesign
+    hov1.classList.add("style");
     fa4[0].classList.remove("op0");
     fa4[1].classList.remove("op0");
     fa4[2].classList.remove("op0");
@@ -579,9 +576,27 @@ function playAniredesign() {
     fa4[10].classList.remove("op0");
     fa4[11].classList.remove("op0");
     fa4[12].classList.remove("op0");
-    fa4[13].classList.remove("op0"); }
-        }
-function StopAniredesign() {
+    fa4[13].classList.remove("op0");
+}
+
+function StopAni() {
+    hov01.classList.remove("style");
+    fa3[0].classList.add("op0");
+    fa3[1].classList.add("op0");
+    fa3[2].classList.add("op0");
+    fa3[3].classList.add("op0");
+    fa3[4].classList.add("op0");
+    fa3[5].classList.add("op0");
+    fa3[6].classList.add("op0");
+    fa3[7].classList.add("op0");
+    fa3[8].classList.add("op0");
+    fa3[9].classList.add("op0");
+    fa3[10].classList.add("op0");
+    fa3[11].classList.add("op0");
+    fa3[12].classList.add("op0");
+    fa3[13].classList.add("op0");
+    //reddesign
+    hov1.classList.remove("style");
     fa4[0].classList.add("op0");
     fa4[1].classList.add("op0");
     fa4[2].classList.add("op0");
@@ -595,9 +610,27 @@ function StopAniredesign() {
     fa4[10].classList.add("op0");
     fa4[11].classList.add("op0");
     fa4[12].classList.add("op0");
-    fa4[13].classList.add("op0"); }
-function playAni2redesign() {
-        if (activateScale9 == 0) {
+    fa4[13].classList.add("op0");
+}
+
+function playAni2() {
+    hov02.classList.add("style");
+    fa2[0].classList.remove("op0");
+    fa2[1].classList.remove("op0");
+    fa2[2].classList.remove("op0");
+    fa2[3].classList.remove("op0");
+    fa2[4].classList.remove("op0");
+    fa2[5].classList.remove("op0");
+    fa2[6].classList.remove("op0");
+    fa2[7].classList.remove("op0");
+    fa2[8].classList.remove("op0");
+    fa2[9].classList.remove("op0");
+    fa2[10].classList.remove("op0");
+    fa2[11].classList.remove("op0");
+    fa2[12].classList.remove("op0");
+    fa2[13].classList.remove("op0");
+    //redesign
+    hov2.classList.add("style");
     fa5[0].classList.remove("op0");
     fa5[1].classList.remove("op0");
     fa5[2].classList.remove("op0");
@@ -611,9 +644,27 @@ function playAni2redesign() {
     fa5[10].classList.remove("op0");
     fa5[11].classList.remove("op0");
     fa5[12].classList.remove("op0");
-    fa5[13].classList.remove("op0"); }
-        }
-function StopAni2redesign() {
+    fa5[13].classList.remove("op0");
+}
+
+function StopAni2() {
+    hov02.classList.remove("style");
+    fa2[0].classList.add("op0");
+    fa2[1].classList.add("op0");
+    fa2[2].classList.add("op0");
+    fa2[3].classList.add("op0");
+    fa2[4].classList.add("op0");
+    fa2[5].classList.add("op0");
+    fa2[6].classList.add("op0");
+    fa2[7].classList.add("op0");
+    fa2[8].classList.add("op0");
+    fa2[9].classList.add("op0");
+    fa2[10].classList.add("op0");
+    fa2[11].classList.add("op0");
+    fa2[12].classList.add("op0");
+    fa2[13].classList.add("op0");
+    //redesign
+    hov2.classList.remove("style");
     fa5[0].classList.add("op0");
     fa5[1].classList.add("op0");
     fa5[2].classList.add("op0");
@@ -627,10 +678,21 @@ function StopAni2redesign() {
     fa5[10].classList.add("op0");
     fa5[11].classList.add("op0");
     fa5[12].classList.add("op0");
-    fa5[13].classList.add("op0"); }
-};
+    fa5[13].classList.add("op0");
+}
+let test1 = document.querySelector(".test1");
+let test2 = document.querySelector(".test2");
+let hov1 = document.querySelector(".hov1");
+let hov2 = document.querySelector(".hov2");
 
-misschili.addEventListener("transitionend",float3);
+
+let test3 = document.querySelector(".test3");
+let test4 = document.querySelector(".test4");
+let hov3 = document.querySelector(".hov3");
+let hov4 = document.querySelector(".hov4");
+
+misschili.addEventListener("transitionend", float3);
+
 function float3() {
     fa6[0].classList.add("anime-me2");
     fa6[1].classList.add("anime-me3");
@@ -661,81 +723,92 @@ function float3() {
     fa7[12].classList.add("anime-me2");
     fa7[13].classList.add("anime-me5");
 
-let test3 = document.querySelector(".test3");
-let test4 = document.querySelector(".test4");
-test3.addEventListener('mouseenter', playAnimisschili);
-test3.addEventListener('mouseleave', StopAnimisschili);
-test4.addEventListener('mouseenter', playAni2misschili);
-test4.addEventListener('mouseleave', StopAni2misschili);
+    test3.addEventListener('mouseenter', playAnimisschili);
+    test3.addEventListener('mouseleave', StopAnimisschili);
+    test4.addEventListener('mouseenter', playAni2misschili);
+    test4.addEventListener('mouseleave', StopAni2misschili);
 
-function playAnimisschili() {
-        if (activateScale10 == 0) {
-            console.log("I work");
-    fa6[0].classList.remove("op0");
-    fa6[1].classList.remove("op0");
-    fa6[2].classList.remove("op0");
-    fa6[3].classList.remove("op0");
-    fa6[4].classList.remove("op0");
-    fa6[5].classList.remove("op0");
-    fa6[6].classList.remove("op0");
-    fa6[7].classList.remove("op0");
-    fa6[8].classList.remove("op0");
-    fa6[9].classList.remove("op0");
-    fa6[10].classList.remove("op0");
-    fa6[11].classList.remove("op0");
-    fa6[12].classList.remove("op0");
-    fa6[13].classList.remove("op0"); }
-        }
-function StopAnimisschili() {
-    fa6[0].classList.add("op0");
-    fa6[1].classList.add("op0");
-    fa6[2].classList.add("op0");
-    fa6[3].classList.add("op0");
-    fa6[4].classList.add("op0");
-    fa6[5].classList.add("op0");
-    fa6[6].classList.add("op0");
-    fa6[7].classList.add("op0");
-    fa6[8].classList.add("op0");
-    fa6[9].classList.add("op0");
-    fa6[10].classList.add("op0");
-    fa6[11].classList.add("op0");
-    fa6[12].classList.add("op0");
-    fa6[13].classList.add("op0"); }
-function playAni2misschili() {
-        if (activateScale11 == 0) {
-    fa7[0].classList.remove("op0");
-    fa7[1].classList.remove("op0");
-    fa7[2].classList.remove("op0");
-    fa7[3].classList.remove("op0");
-    fa7[4].classList.remove("op0");
-    fa7[5].classList.remove("op0");
-    fa7[6].classList.remove("op0");
-    fa7[7].classList.remove("op0");
-    fa7[8].classList.remove("op0");
-    fa7[9].classList.remove("op0");
-    fa7[10].classList.remove("op0");
-    fa7[11].classList.remove("op0");
-    fa7[12].classList.remove("op0");
-    fa7[13].classList.remove("op0"); }
-        }
-function StopAni2misschili() {
-    fa7[0].classList.add("op0");
-    fa7[1].classList.add("op0");
-    fa7[2].classList.add("op0");
-    fa7[3].classList.add("op0");
-    fa7[4].classList.add("op0");
-    fa7[5].classList.add("op0");
-    fa7[6].classList.add("op0");
-    fa7[7].classList.add("op0");
-    fa7[8].classList.add("op0");
-    fa7[9].classList.add("op0");
-    fa7[10].classList.add("op0");
-    fa7[11].classList.add("op0");
-    fa7[12].classList.add("op0");
-    fa7[13].classList.add("op0"); }
+    function playAnimisschili() {
+        console.log("I work");
+        hov3.classList.add("style");
+        fa6[0].classList.remove("op0");
+        fa6[1].classList.remove("op0");
+        fa6[2].classList.remove("op0");
+        fa6[3].classList.remove("op0");
+        fa6[4].classList.remove("op0");
+        fa6[5].classList.remove("op0");
+        fa6[6].classList.remove("op0");
+        fa6[7].classList.remove("op0");
+        fa6[8].classList.remove("op0");
+        fa6[9].classList.remove("op0");
+        fa6[10].classList.remove("op0");
+        fa6[11].classList.remove("op0");
+        fa6[12].classList.remove("op0");
+        fa6[13].classList.remove("op0");
+    }
+
+    function StopAnimisschili() {
+        hov3.classList.remove("style");
+        fa6[0].classList.add("op0");
+        fa6[1].classList.add("op0");
+        fa6[2].classList.add("op0");
+        fa6[3].classList.add("op0");
+        fa6[4].classList.add("op0");
+        fa6[5].classList.add("op0");
+        fa6[6].classList.add("op0");
+        fa6[7].classList.add("op0");
+        fa6[8].classList.add("op0");
+        fa6[9].classList.add("op0");
+        fa6[10].classList.add("op0");
+        fa6[11].classList.add("op0");
+        fa6[12].classList.add("op0");
+        fa6[13].classList.add("op0");
+    }
+
+    function playAni2misschili() {
+        hov4.classList.add("style");
+        fa7[0].classList.remove("op0");
+        fa7[1].classList.remove("op0");
+        fa7[2].classList.remove("op0");
+        fa7[3].classList.remove("op0");
+        fa7[4].classList.remove("op0");
+        fa7[5].classList.remove("op0");
+        fa7[6].classList.remove("op0");
+        fa7[7].classList.remove("op0");
+        fa7[8].classList.remove("op0");
+        fa7[9].classList.remove("op0");
+        fa7[10].classList.remove("op0");
+        fa7[11].classList.remove("op0");
+        fa7[12].classList.remove("op0");
+        fa7[13].classList.remove("op0");
+    }
+
+    function StopAni2misschili() {
+        hov4.classList.remove("style");
+        fa7[0].classList.add("op0");
+        fa7[1].classList.add("op0");
+        fa7[2].classList.add("op0");
+        fa7[3].classList.add("op0");
+        fa7[4].classList.add("op0");
+        fa7[5].classList.add("op0");
+        fa7[6].classList.add("op0");
+        fa7[7].classList.add("op0");
+        fa7[8].classList.add("op0");
+        fa7[9].classList.add("op0");
+        fa7[10].classList.add("op0");
+        fa7[11].classList.add("op0");
+        fa7[12].classList.add("op0");
+        fa7[13].classList.add("op0");
+    }
 };
 
-menu2.addEventListener("transitionend",float4);
+let test8 = document.querySelector(".test8");
+let test9 = document.querySelector(".test9");
+let hov8 = document.querySelector(".hov8");
+let hov9 = document.querySelector(".hov9");
+
+menu2.addEventListener("transitionend", float4);
+
 function float4() {
     console.log("menu")
     fa8[0].classList.add("anime-me2");
@@ -767,81 +840,92 @@ function float4() {
     fa9[12].classList.add("anime-me2");
     fa9[13].classList.add("anime-me5");
 
-let test8 = document.querySelector(".test8");
-let test9 = document.querySelector(".test9");
-test8.addEventListener('mouseenter', playAnimenu);
-test8.addEventListener('mouseleave', StopAnimenu);
-test9.addEventListener('mouseenter', playAni2menu);
-test9.addEventListener('mouseleave', StopAni2menu);
+    test8.addEventListener('mouseenter', playAnimenu);
+    test8.addEventListener('mouseleave', StopAnimenu);
+    test9.addEventListener('mouseenter', playAni2menu);
+    test9.addEventListener('mouseleave', StopAni2menu);
 
-function playAnimenu() {
-        if (activateScale12 == 0) {
-            console.log("I work menu");
-    fa8[0].classList.remove("op0");
-    fa8[1].classList.remove("op0");
-    fa8[2].classList.remove("op0");
-    fa8[3].classList.remove("op0");
-    fa8[4].classList.remove("op0");
-    fa8[5].classList.remove("op0");
-    fa8[6].classList.remove("op0");
-    fa8[7].classList.remove("op0");
-    fa8[8].classList.remove("op0");
-    fa8[9].classList.remove("op0");
-    fa8[10].classList.remove("op0");
-    fa8[11].classList.remove("op0");
-    fa8[12].classList.remove("op0");
-    fa8[13].classList.remove("op0"); }
-        }
-function StopAnimenu() {
-    fa8[0].classList.add("op0");
-    fa8[1].classList.add("op0");
-    fa8[2].classList.add("op0");
-    fa8[3].classList.add("op0");
-    fa8[4].classList.add("op0");
-    fa8[5].classList.add("op0");
-    fa8[6].classList.add("op0");
-    fa8[7].classList.add("op0");
-    fa8[8].classList.add("op0");
-    fa8[9].classList.add("op0");
-    fa8[10].classList.add("op0");
-    fa8[11].classList.add("op0");
-    fa8[12].classList.add("op0");
-    fa8[13].classList.add("op0"); }
-function playAni2menu() {
-        if (activateScale13 == 0) {
-    fa9[0].classList.remove("op0");
-    fa9[1].classList.remove("op0");
-    fa9[2].classList.remove("op0");
-    fa9[3].classList.remove("op0");
-    fa9[4].classList.remove("op0");
-    fa9[5].classList.remove("op0");
-    fa9[6].classList.remove("op0");
-    fa9[7].classList.remove("op0");
-    fa9[8].classList.remove("op0");
-    fa9[9].classList.remove("op0");
-    fa9[10].classList.remove("op0");
-    fa9[11].classList.remove("op0");
-    fa9[12].classList.remove("op0");
-    fa9[13].classList.remove("op0"); }
-        }
-function StopAni2menu() {
-    fa9[0].classList.add("op0");
-    fa9[1].classList.add("op0");
-    fa9[2].classList.add("op0");
-    fa9[3].classList.add("op0");
-    fa9[4].classList.add("op0");
-    fa9[5].classList.add("op0");
-    fa9[6].classList.add("op0");
-    fa9[7].classList.add("op0");
-    fa9[8].classList.add("op0");
-    fa9[9].classList.add("op0");
-    fa9[10].classList.add("op0");
-    fa9[11].classList.add("op0");
-    fa9[12].classList.add("op0");
-    fa9[13].classList.add("op0"); }
+    function playAnimenu() {
+        console.log("I work menu");
+        hov8.classList.add("style");
+        fa8[0].classList.remove("op0");
+        fa8[1].classList.remove("op0");
+        fa8[2].classList.remove("op0");
+        fa8[3].classList.remove("op0");
+        fa8[4].classList.remove("op0");
+        fa8[5].classList.remove("op0");
+        fa8[6].classList.remove("op0");
+        fa8[7].classList.remove("op0");
+        fa8[8].classList.remove("op0");
+        fa8[9].classList.remove("op0");
+        fa8[10].classList.remove("op0");
+        fa8[11].classList.remove("op0");
+        fa8[12].classList.remove("op0");
+        fa8[13].classList.remove("op0");
+    }
+
+    function StopAnimenu() {
+        hov8.classList.remove("style");
+        fa8[0].classList.add("op0");
+        fa8[1].classList.add("op0");
+        fa8[2].classList.add("op0");
+        fa8[3].classList.add("op0");
+        fa8[4].classList.add("op0");
+        fa8[5].classList.add("op0");
+        fa8[6].classList.add("op0");
+        fa8[7].classList.add("op0");
+        fa8[8].classList.add("op0");
+        fa8[9].classList.add("op0");
+        fa8[10].classList.add("op0");
+        fa8[11].classList.add("op0");
+        fa8[12].classList.add("op0");
+        fa8[13].classList.add("op0");
+    }
+
+    function playAni2menu() {
+        hov9.classList.add("style");
+        fa9[0].classList.remove("op0");
+        fa9[1].classList.remove("op0");
+        fa9[2].classList.remove("op0");
+        fa9[3].classList.remove("op0");
+        fa9[4].classList.remove("op0");
+        fa9[5].classList.remove("op0");
+        fa9[6].classList.remove("op0");
+        fa9[7].classList.remove("op0");
+        fa9[8].classList.remove("op0");
+        fa9[9].classList.remove("op0");
+        fa9[10].classList.remove("op0");
+        fa9[11].classList.remove("op0");
+        fa9[12].classList.remove("op0");
+        fa9[13].classList.remove("op0");
+    }
+
+    function StopAni2menu() {
+        hov9.classList.remove("style");
+        fa9[0].classList.add("op0");
+        fa9[1].classList.add("op0");
+        fa9[2].classList.add("op0");
+        fa9[3].classList.add("op0");
+        fa9[4].classList.add("op0");
+        fa9[5].classList.add("op0");
+        fa9[6].classList.add("op0");
+        fa9[7].classList.add("op0");
+        fa9[8].classList.add("op0");
+        fa9[9].classList.add("op0");
+        fa9[10].classList.add("op0");
+        fa9[11].classList.add("op0");
+        fa9[12].classList.add("op0");
+        fa9[13].classList.add("op0");
+    }
 };
 
-drum.addEventListener("transitionend",float5);
+let test10 = document.querySelector(".test10");
+let test11 = document.querySelector(".test11");
+let hov10 = document.querySelector(".hov10");
+let hov11 = document.querySelector(".hov11");
+
+drum.addEventListener("transitionend", float5);
+
 function float5() {
     console.log("drum")
     fa10[0].classList.add("anime-me2");
@@ -873,81 +957,93 @@ function float5() {
     fa11[12].classList.add("anime-me2");
     fa11[13].classList.add("anime-me5");
 
-let test10 = document.querySelector(".test10");
-let test11 = document.querySelector(".test11");
-test10.addEventListener('mouseenter', playAnidrum);
-test10.addEventListener('mouseleave', StopAnidrum);
-test11.addEventListener('mouseenter', playAni2drum);
-test11.addEventListener('mouseleave', StopAni2drum);
+    test10.addEventListener('mouseenter', playAnidrum);
+    test10.addEventListener('mouseleave', StopAnidrum);
+    test11.addEventListener('mouseenter', playAni2drum);
+    test11.addEventListener('mouseleave', StopAni2drum);
 
-function playAnidrum() {
-        if (activateScale14 == 0) {
-            console.log("I work menu");
-    fa10[0].classList.remove("op0");
-    fa10[1].classList.remove("op0");
-    fa10[2].classList.remove("op0");
-    fa10[3].classList.remove("op0");
-    fa10[4].classList.remove("op0");
-    fa10[5].classList.remove("op0");
-    fa10[6].classList.remove("op0");
-    fa10[7].classList.remove("op0");
-    fa10[8].classList.remove("op0");
-    fa10[9].classList.remove("op0");
-    fa10[10].classList.remove("op0");
-    fa10[11].classList.remove("op0");
-    fa10[12].classList.remove("op0");
-    fa10[13].classList.remove("op0"); }
-        }
-function StopAnidrum() {
-    fa10[0].classList.add("op0");
-    fa10[1].classList.add("op0");
-    fa10[2].classList.add("op0");
-    fa10[3].classList.add("op0");
-    fa10[4].classList.add("op0");
-    fa10[5].classList.add("op0");
-    fa10[6].classList.add("op0");
-    fa10[7].classList.add("op0");
-    fa10[8].classList.add("op0");
-    fa10[9].classList.add("op0");
-    fa10[10].classList.add("op0");
-    fa10[11].classList.add("op0");
-    fa10[12].classList.add("op0");
-    fa10[13].classList.add("op0"); }
-function playAni2drum() {
-        if (activateScale15 == 0) {
-    fa11[0].classList.remove("op0");
-    fa11[1].classList.remove("op0");
-    fa11[2].classList.remove("op0");
-    fa11[3].classList.remove("op0");
-    fa11[4].classList.remove("op0");
-    fa11[5].classList.remove("op0");
-    fa11[6].classList.remove("op0");
-    fa11[7].classList.remove("op0");
-    fa11[8].classList.remove("op0");
-    fa11[9].classList.remove("op0");
-    fa11[10].classList.remove("op0");
-    fa11[11].classList.remove("op0");
-    fa11[12].classList.remove("op0");
-    fa11[13].classList.remove("op0"); }
-        }
-function StopAni2drum() {
-    fa11[0].classList.add("op0");
-    fa11[1].classList.add("op0");
-    fa11[2].classList.add("op0");
-    fa11[3].classList.add("op0");
-    fa11[4].classList.add("op0");
-    fa11[5].classList.add("op0");
-    fa11[6].classList.add("op0");
-    fa11[7].classList.add("op0");
-    fa11[8].classList.add("op0");
-    fa11[9].classList.add("op0");
-    fa11[10].classList.add("op0");
-    fa11[11].classList.add("op0");
-    fa11[12].classList.add("op0");
-    fa11[13].classList.add("op0"); }
+    function playAnidrum() {
+        console.log("I work menu");
+        hov10.classList.add("style");
+        fa10[0].classList.remove("op0");
+        fa10[1].classList.remove("op0");
+        fa10[2].classList.remove("op0");
+        fa10[3].classList.remove("op0");
+        fa10[4].classList.remove("op0");
+        fa10[5].classList.remove("op0");
+        fa10[6].classList.remove("op0");
+        fa10[7].classList.remove("op0");
+        fa10[8].classList.remove("op0");
+        fa10[9].classList.remove("op0");
+        fa10[10].classList.remove("op0");
+        fa10[11].classList.remove("op0");
+        fa10[12].classList.remove("op0");
+        fa10[13].classList.remove("op0");
+    }
+
+    function StopAnidrum() {
+        hov10.classList.remove("style");
+        fa10[0].classList.add("op0");
+        fa10[1].classList.add("op0");
+        fa10[2].classList.add("op0");
+        fa10[3].classList.add("op0");
+        fa10[4].classList.add("op0");
+        fa10[5].classList.add("op0");
+        fa10[6].classList.add("op0");
+        fa10[7].classList.add("op0");
+        fa10[8].classList.add("op0");
+        fa10[9].classList.add("op0");
+        fa10[10].classList.add("op0");
+        fa10[11].classList.add("op0");
+        fa10[12].classList.add("op0");
+        fa10[13].classList.add("op0");
+    }
+
+    function playAni2drum() {
+        hov11.classList.add("style");
+        fa11[0].classList.remove("op0");
+        fa11[1].classList.remove("op0");
+        fa11[2].classList.remove("op0");
+        fa11[3].classList.remove("op0");
+        fa11[4].classList.remove("op0");
+        fa11[5].classList.remove("op0");
+        fa11[6].classList.remove("op0");
+        fa11[7].classList.remove("op0");
+        fa11[8].classList.remove("op0");
+        fa11[9].classList.remove("op0");
+        fa11[10].classList.remove("op0");
+        fa11[11].classList.remove("op0");
+        fa11[12].classList.remove("op0");
+        fa11[13].classList.remove("op0");
+    }
+
+    function StopAni2drum() {
+        hov11.classList.remove("style");
+        fa11[0].classList.add("op0");
+        fa11[1].classList.add("op0");
+        fa11[2].classList.add("op0");
+        fa11[3].classList.add("op0");
+        fa11[4].classList.add("op0");
+        fa11[5].classList.add("op0");
+        fa11[6].classList.add("op0");
+        fa11[7].classList.add("op0");
+        fa11[8].classList.add("op0");
+        fa11[9].classList.add("op0");
+        fa11[10].classList.add("op0");
+        fa11[11].classList.add("op0");
+        fa11[12].classList.add("op0");
+        fa11[13].classList.add("op0");
+    }
 };
 
-frank.addEventListener("transitionend",float6);
+let test12 = document.querySelector(".test12");
+let test13 = document.querySelector(".test13");
+let hov12 = document.querySelector(".hov12");
+let hov13 = document.querySelector(".hov13");
+
+
+frank.addEventListener("transitionend", float6);
+
 function float6() {
     console.log("frank")
     fa12[0].classList.add("anime-me2");
@@ -979,81 +1075,91 @@ function float6() {
     fa13[12].classList.add("anime-me2");
     fa13[13].classList.add("anime-me5");
 
-let test12 = document.querySelector(".test12");
-let test13 = document.querySelector(".test13");
-test12.addEventListener('mouseenter', playAnifrank);
-test12.addEventListener('mouseleave', StopAnifrank);
-test13.addEventListener('mouseenter', playAni2frank);
-test13.addEventListener('mouseleave', StopAni2frank);
+    test12.addEventListener('mouseenter', playAnifrank);
+    test12.addEventListener('mouseleave', StopAnifrank);
+    test13.addEventListener('mouseenter', playAni2frank);
+    test13.addEventListener('mouseleave', StopAni2frank);
 
-function playAnifrank() {
-        if (activateScale16 == 0) {
-            console.log("I work frank");
-    fa12[0].classList.remove("op0");
-    fa12[1].classList.remove("op0");
-    fa12[2].classList.remove("op0");
-    fa12[3].classList.remove("op0");
-    fa12[4].classList.remove("op0");
-    fa12[5].classList.remove("op0");
-    fa12[6].classList.remove("op0");
-    fa12[7].classList.remove("op0");
-    fa12[8].classList.remove("op0");
-    fa12[9].classList.remove("op0");
-    fa12[10].classList.remove("op0");
-    fa12[11].classList.remove("op0");
-    fa12[12].classList.remove("op0");
-    fa12[13].classList.remove("op0"); }
-        }
-function StopAnifrank() {
-    fa12[0].classList.add("op0");
-    fa12[1].classList.add("op0");
-    fa12[2].classList.add("op0");
-    fa12[3].classList.add("op0");
-    fa12[4].classList.add("op0");
-    fa12[5].classList.add("op0");
-    fa12[6].classList.add("op0");
-    fa12[7].classList.add("op0");
-    fa12[8].classList.add("op0");
-    fa12[9].classList.add("op0");
-    fa12[10].classList.add("op0");
-    fa12[11].classList.add("op0");
-    fa12[12].classList.add("op0");
-    fa12[13].classList.add("op0"); }
-function playAni2frank() {
-        if (activateScale17 == 0) {
-    fa13[0].classList.remove("op0");
-    fa13[1].classList.remove("op0");
-    fa13[2].classList.remove("op0");
-    fa13[3].classList.remove("op0");
-    fa13[4].classList.remove("op0");
-    fa13[5].classList.remove("op0");
-    fa13[6].classList.remove("op0");
-    fa13[7].classList.remove("op0");
-    fa13[8].classList.remove("op0");
-    fa13[9].classList.remove("op0");
-    fa13[10].classList.remove("op0");
-    fa13[11].classList.remove("op0");
-    fa13[12].classList.remove("op0");
-    fa13[13].classList.remove("op0"); }
-        }
-function StopAni2frank() {
-    fa13[0].classList.add("op0");
-    fa13[1].classList.add("op0");
-    fa13[2].classList.add("op0");
-    fa13[3].classList.add("op0");
-    fa13[4].classList.add("op0");
-    fa13[5].classList.add("op0");
-    fa13[6].classList.add("op0");
-    fa13[7].classList.add("op0");
-    fa13[8].classList.add("op0");
-    fa13[9].classList.add("op0");
-    fa13[10].classList.add("op0");
-    fa13[11].classList.add("op0");
-    fa13[12].classList.add("op0");
-    fa13[13].classList.add("op0"); }
+    function playAnifrank() {
+        console.log("I work frank");
+        hov12.classList.add("style");
+        fa12[0].classList.remove("op0");
+        fa12[1].classList.remove("op0");
+        fa12[2].classList.remove("op0");
+        fa12[3].classList.remove("op0");
+        fa12[4].classList.remove("op0");
+        fa12[5].classList.remove("op0");
+        fa12[6].classList.remove("op0");
+        fa12[7].classList.remove("op0");
+        fa12[8].classList.remove("op0");
+        fa12[9].classList.remove("op0");
+        fa12[10].classList.remove("op0");
+        fa12[11].classList.remove("op0");
+        fa12[12].classList.remove("op0");
+        fa12[13].classList.remove("op0");
+    }
+
+    function StopAnifrank() {
+        hov12.classList.remove("style");
+        fa12[0].classList.add("op0");
+        fa12[1].classList.add("op0");
+        fa12[2].classList.add("op0");
+        fa12[3].classList.add("op0");
+        fa12[4].classList.add("op0");
+        fa12[5].classList.add("op0");
+        fa12[6].classList.add("op0");
+        fa12[7].classList.add("op0");
+        fa12[8].classList.add("op0");
+        fa12[9].classList.add("op0");
+        fa12[10].classList.add("op0");
+        fa12[11].classList.add("op0");
+        fa12[12].classList.add("op0");
+        fa12[13].classList.add("op0");
+    }
+
+    function playAni2frank() {
+        hov13.classList.add("style");
+        fa13[0].classList.remove("op0");
+        fa13[1].classList.remove("op0");
+        fa13[2].classList.remove("op0");
+        fa13[3].classList.remove("op0");
+        fa13[4].classList.remove("op0");
+        fa13[5].classList.remove("op0");
+        fa13[6].classList.remove("op0");
+        fa13[7].classList.remove("op0");
+        fa13[8].classList.remove("op0");
+        fa13[9].classList.remove("op0");
+        fa13[10].classList.remove("op0");
+        fa13[11].classList.remove("op0");
+        fa13[12].classList.remove("op0");
+        fa13[13].classList.remove("op0");
+    }
+
+    function StopAni2frank() {
+        hov13.classList.remove("style");
+        fa13[0].classList.add("op0");
+        fa13[1].classList.add("op0");
+        fa13[2].classList.add("op0");
+        fa13[3].classList.add("op0");
+        fa13[4].classList.add("op0");
+        fa13[5].classList.add("op0");
+        fa13[6].classList.add("op0");
+        fa13[7].classList.add("op0");
+        fa13[8].classList.add("op0");
+        fa13[9].classList.add("op0");
+        fa13[10].classList.add("op0");
+        fa13[11].classList.add("op0");
+        fa13[12].classList.add("op0");
+        fa13[13].classList.add("op0");
+    }
 };
 
-viewfinders.addEventListener("transitionend",float7);
+let hov15a = document.querySelector(".hov15a");
+let hov15 = document.querySelector(".hov15");
+let hov14 = document.querySelector(".hov14");
+
+viewfinders.addEventListener("transitionend", float7);
+
 function float7() {
     console.log("view")
     fa14[0].classList.add("anime-me2");
@@ -1085,81 +1191,95 @@ function float7() {
     fa15[12].classList.add("anime-me2");
     fa15[13].classList.add("anime-me5");
 
-let test14 = document.querySelector(".test14");
-let test15 = document.querySelector(".test15");
-test14.addEventListener('mouseenter', playAniview);
-test14.addEventListener('mouseleave', StopAniview);
-test15.addEventListener('mouseenter', playAni2view);
-test15.addEventListener('mouseleave', StopAni2view);
+    let test14 = document.querySelector(".test14");
+    let test15 = document.querySelector(".test15");
+    test14.addEventListener('mouseenter', playAniview);
+    test14.addEventListener('mouseleave', StopAniview);
+    test15.addEventListener('mouseenter', playAni2view);
+    test15.addEventListener('mouseleave', StopAni2view);
 
-function playAniview() {
-        if (activateScale18 == 0) {
-            console.log("I work frank");
-    fa14[0].classList.remove("op0");
-    fa14[1].classList.remove("op0");
-    fa14[2].classList.remove("op0");
-    fa14[3].classList.remove("op0");
-    fa14[4].classList.remove("op0");
-    fa14[5].classList.remove("op0");
-    fa14[6].classList.remove("op0");
-    fa14[7].classList.remove("op0");
-    fa14[8].classList.remove("op0");
-    fa14[9].classList.remove("op0");
-    fa14[10].classList.remove("op0");
-    fa14[11].classList.remove("op0");
-    fa14[12].classList.remove("op0");
-    fa14[13].classList.remove("op0"); }
-        }
-function StopAniview() {
-    fa14[0].classList.add("op0");
-    fa14[1].classList.add("op0");
-    fa14[2].classList.add("op0");
-    fa14[3].classList.add("op0");
-    fa14[4].classList.add("op0");
-    fa14[5].classList.add("op0");
-    fa14[6].classList.add("op0");
-    fa14[7].classList.add("op0");
-    fa14[8].classList.add("op0");
-    fa14[9].classList.add("op0");
-    fa14[10].classList.add("op0");
-    fa14[11].classList.add("op0");
-    fa14[12].classList.add("op0");
-    fa14[13].classList.add("op0"); }
-function playAni2view() {
-        if (activateScale19 == 0) {
-    fa15[0].classList.remove("op0");
-    fa15[1].classList.remove("op0");
-    fa15[2].classList.remove("op0");
-    fa15[3].classList.remove("op0");
-    fa15[4].classList.remove("op0");
-    fa15[5].classList.remove("op0");
-    fa15[6].classList.remove("op0");
-    fa15[7].classList.remove("op0");
-    fa15[8].classList.remove("op0");
-    fa15[9].classList.remove("op0");
-    fa15[10].classList.remove("op0");
-    fa15[11].classList.remove("op0");
-    fa15[12].classList.remove("op0");
-    fa15[13].classList.remove("op0"); }
-        }
-function StopAni2view() {
-    fa15[0].classList.add("op0");
-    fa15[1].classList.add("op0");
-    fa15[2].classList.add("op0");
-    fa15[3].classList.add("op0");
-    fa15[4].classList.add("op0");
-    fa15[5].classList.add("op0");
-    fa15[6].classList.add("op0");
-    fa15[7].classList.add("op0");
-    fa15[8].classList.add("op0");
-    fa15[9].classList.add("op0");
-    fa15[10].classList.add("op0");
-    fa15[11].classList.add("op0");
-    fa15[12].classList.add("op0");
-    fa15[13].classList.add("op0"); }
+    function playAniview() {
+        console.log("I work frank");
+        hov14.classList.add("style");
+        fa14[0].classList.remove("op0");
+        fa14[1].classList.remove("op0");
+        fa14[2].classList.remove("op0");
+        fa14[3].classList.remove("op0");
+        fa14[4].classList.remove("op0");
+        fa14[5].classList.remove("op0");
+        fa14[6].classList.remove("op0");
+        fa14[7].classList.remove("op0");
+        fa14[8].classList.remove("op0");
+        fa14[9].classList.remove("op0");
+        fa14[10].classList.remove("op0");
+        fa14[11].classList.remove("op0");
+        fa14[12].classList.remove("op0");
+        fa14[13].classList.remove("op0");
+    }
+
+    function StopAniview() {
+        hov14.classList.remove("style");
+        fa14[0].classList.add("op0");
+        fa14[1].classList.add("op0");
+        fa14[2].classList.add("op0");
+        fa14[3].classList.add("op0");
+        fa14[4].classList.add("op0");
+        fa14[5].classList.add("op0");
+        fa14[6].classList.add("op0");
+        fa14[7].classList.add("op0");
+        fa14[8].classList.add("op0");
+        fa14[9].classList.add("op0");
+        fa14[10].classList.add("op0");
+        fa14[11].classList.add("op0");
+        fa14[12].classList.add("op0");
+        fa14[13].classList.add("op0");
+    }
+
+    function playAni2view() {
+        hov15a.classList.add("style");
+        hov15.classList.add("style");
+        fa15[0].classList.remove("op0");
+        fa15[1].classList.remove("op0");
+        fa15[2].classList.remove("op0");
+        fa15[3].classList.remove("op0");
+        fa15[4].classList.remove("op0");
+        fa15[5].classList.remove("op0");
+        fa15[6].classList.remove("op0");
+        fa15[7].classList.remove("op0");
+        fa15[8].classList.remove("op0");
+        fa15[9].classList.remove("op0");
+        fa15[10].classList.remove("op0");
+        fa15[11].classList.remove("op0");
+        fa15[12].classList.remove("op0");
+        fa15[13].classList.remove("op0");
+    }
+
+    function StopAni2view() {
+        hov15a.classList.remove("style");
+        hov15.classList.remove("style");
+        fa15[0].classList.add("op0");
+        fa15[1].classList.add("op0");
+        fa15[2].classList.add("op0");
+        fa15[3].classList.add("op0");
+        fa15[4].classList.add("op0");
+        fa15[5].classList.add("op0");
+        fa15[6].classList.add("op0");
+        fa15[7].classList.add("op0");
+        fa15[8].classList.add("op0");
+        fa15[9].classList.add("op0");
+        fa15[10].classList.add("op0");
+        fa15[11].classList.add("op0");
+        fa15[12].classList.add("op0");
+        fa15[13].classList.add("op0");
+    }
 };
 
-video.addEventListener("transitionend",float8);
+let hov16 = document.querySelector(".hov16");
+let hov17 = document.querySelector(".hov17");
+
+
+video.addEventListener("transitionend", float8);
+
 function float8() {
     console.log("video")
     fa16[0].classList.add("anime-me2");
@@ -1191,81 +1311,92 @@ function float8() {
     fa17[12].classList.add("anime-me2");
     fa17[13].classList.add("anime-me5");
 
-let test16 = document.querySelector(".test16");
-let test17 = document.querySelector(".test17");
-test16.addEventListener('mouseenter', playAnivid);
-test16.addEventListener('mouseleave', StopAnivid);
-test17.addEventListener('mouseenter', playAni2vid);
-test17.addEventListener('mouseleave', StopAni2vid);
+    let test16 = document.querySelector(".test16");
+    let test17 = document.querySelector(".test17");
+    test16.addEventListener('mouseenter', playAnivid);
+    test16.addEventListener('mouseleave', StopAnivid);
+    test17.addEventListener('mouseenter', playAni2vid);
+    test17.addEventListener('mouseleave', StopAni2vid);
 
-function playAnivid() {
-        if (activateScale20 == 0) {
-            console.log("I work frank");
-    fa16[0].classList.remove("op0");
-    fa16[1].classList.remove("op0");
-    fa16[2].classList.remove("op0");
-    fa16[3].classList.remove("op0");
-    fa16[4].classList.remove("op0");
-    fa16[5].classList.remove("op0");
-    fa16[6].classList.remove("op0");
-    fa16[7].classList.remove("op0");
-    fa16[8].classList.remove("op0");
-    fa16[9].classList.remove("op0");
-    fa16[10].classList.remove("op0");
-    fa16[11].classList.remove("op0");
-    fa16[12].classList.remove("op0");
-    fa16[13].classList.remove("op0"); }
-        }
-function StopAnivid() {
-    fa16[0].classList.add("op0");
-    fa16[1].classList.add("op0");
-    fa16[2].classList.add("op0");
-    fa16[3].classList.add("op0");
-    fa16[4].classList.add("op0");
-    fa16[5].classList.add("op0");
-    fa16[6].classList.add("op0");
-    fa16[7].classList.add("op0");
-    fa16[8].classList.add("op0");
-    fa16[9].classList.add("op0");
-    fa16[10].classList.add("op0");
-    fa16[11].classList.add("op0");
-    fa16[12].classList.add("op0");
-    fa16[13].classList.add("op0"); }
-function playAni2vid() {
-        if (activateScale21 == 0) {
-    fa17[0].classList.remove("op0");
-    fa17[1].classList.remove("op0");
-    fa17[2].classList.remove("op0");
-    fa17[3].classList.remove("op0");
-    fa17[4].classList.remove("op0");
-    fa17[5].classList.remove("op0");
-    fa17[6].classList.remove("op0");
-    fa17[7].classList.remove("op0");
-    fa17[8].classList.remove("op0");
-    fa17[9].classList.remove("op0");
-    fa17[10].classList.remove("op0");
-    fa17[11].classList.remove("op0");
-    fa17[12].classList.remove("op0");
-    fa17[13].classList.remove("op0"); }
-        }
-function StopAni2vid() {
-    fa17[0].classList.add("op0");
-    fa17[1].classList.add("op0");
-    fa17[2].classList.add("op0");
-    fa17[3].classList.add("op0");
-    fa17[4].classList.add("op0");
-    fa17[5].classList.add("op0");
-    fa17[6].classList.add("op0");
-    fa17[7].classList.add("op0");
-    fa17[8].classList.add("op0");
-    fa17[9].classList.add("op0");
-    fa17[10].classList.add("op0");
-    fa17[11].classList.add("op0");
-    fa17[12].classList.add("op0");
-    fa17[13].classList.add("op0"); }
+    function playAnivid() {
+        console.log("I work frank");
+        hov16.classList.add("style");
+        fa16[0].classList.remove("op0");
+        fa16[1].classList.remove("op0");
+        fa16[2].classList.remove("op0");
+        fa16[3].classList.remove("op0");
+        fa16[4].classList.remove("op0");
+        fa16[5].classList.remove("op0");
+        fa16[6].classList.remove("op0");
+        fa16[7].classList.remove("op0");
+        fa16[8].classList.remove("op0");
+        fa16[9].classList.remove("op0");
+        fa16[10].classList.remove("op0");
+        fa16[11].classList.remove("op0");
+        fa16[12].classList.remove("op0");
+        fa16[13].classList.remove("op0");
+    }
+
+    function StopAnivid() {
+        hov16.classList.remove("style");
+        fa16[0].classList.add("op0");
+        fa16[1].classList.add("op0");
+        fa16[2].classList.add("op0");
+        fa16[3].classList.add("op0");
+        fa16[4].classList.add("op0");
+        fa16[5].classList.add("op0");
+        fa16[6].classList.add("op0");
+        fa16[7].classList.add("op0");
+        fa16[8].classList.add("op0");
+        fa16[9].classList.add("op0");
+        fa16[10].classList.add("op0");
+        fa16[11].classList.add("op0");
+        fa16[12].classList.add("op0");
+        fa16[13].classList.add("op0");
+    }
+
+    function playAni2vid() {
+        hov17.classList.add("style");
+        fa17[0].classList.remove("op0");
+        fa17[1].classList.remove("op0");
+        fa17[2].classList.remove("op0");
+        fa17[3].classList.remove("op0");
+        fa17[4].classList.remove("op0");
+        fa17[5].classList.remove("op0");
+        fa17[6].classList.remove("op0");
+        fa17[7].classList.remove("op0");
+        fa17[8].classList.remove("op0");
+        fa17[9].classList.remove("op0");
+        fa17[10].classList.remove("op0");
+        fa17[11].classList.remove("op0");
+        fa17[12].classList.remove("op0");
+        fa17[13].classList.remove("op0");
+    }
+
+    function StopAni2vid() {
+        hov17.classList.remove("style");
+        fa17[0].classList.add("op0");
+        fa17[1].classList.add("op0");
+        fa17[2].classList.add("op0");
+        fa17[3].classList.add("op0");
+        fa17[4].classList.add("op0");
+        fa17[5].classList.add("op0");
+        fa17[6].classList.add("op0");
+        fa17[7].classList.add("op0");
+        fa17[8].classList.add("op0");
+        fa17[9].classList.add("op0");
+        fa17[10].classList.add("op0");
+        fa17[11].classList.add("op0");
+        fa17[12].classList.add("op0");
+        fa17[13].classList.add("op0");
+    }
 };
 
-about.addEventListener("transitionend",float9);
+let hov18 = document.querySelector(".hov18");
+let hov19 = document.querySelector(".hov19");
+
+about.addEventListener("transitionend", float9);
+
 function float9() {
     console.log("about")
     fa18[0].classList.add("anime-me2");
@@ -1297,79 +1428,144 @@ function float9() {
     fa19[12].classList.add("anime-me2");
     fa19[13].classList.add("anime-me5");
 
-let test18 = document.querySelector(".test18");
-let test19 = document.querySelector(".test19");
-test18.addEventListener('mouseenter', playAniabout);
-test18.addEventListener('mouseleave', StopAniabout);
-test19.addEventListener('mouseenter', playAni2about);
-test19.addEventListener('mouseleave', StopAni2about);
+    let test18 = document.querySelector(".test18");
+    let test19 = document.querySelector(".test19");
+    test18.addEventListener('mouseenter', playAniabout);
+    test18.addEventListener('mouseleave', StopAniabout);
+    test19.addEventListener('mouseenter', playAni2about);
+    test19.addEventListener('mouseleave', StopAni2about);
 
-function playAniabout() {
-        if (activateScale22 == 0) {
-            console.log("I work frank");
-    fa18[0].classList.remove("op0");
-    fa18[1].classList.remove("op0");
-    fa18[2].classList.remove("op0");
-    fa18[3].classList.remove("op0");
-    fa18[4].classList.remove("op0");
-    fa18[5].classList.remove("op0");
-    fa18[6].classList.remove("op0");
-    fa18[7].classList.remove("op0");
-    fa18[8].classList.remove("op0");
-    fa18[9].classList.remove("op0");
-    fa18[10].classList.remove("op0");
-    fa18[11].classList.remove("op0");
-    fa18[12].classList.remove("op0");
-    fa18[13].classList.remove("op0"); }
-        }
-function StopAniabout() {
-    fa18[0].classList.add("op0");
-    fa18[1].classList.add("op0");
-    fa18[2].classList.add("op0");
-    fa18[3].classList.add("op0");
-    fa18[4].classList.add("op0");
-    fa18[5].classList.add("op0");
-    fa18[6].classList.add("op0");
-    fa18[7].classList.add("op0");
-    fa18[8].classList.add("op0");
-    fa18[9].classList.add("op0");
-    fa18[10].classList.add("op0");
-    fa18[11].classList.add("op0");
-    fa18[12].classList.add("op0");
-    fa18[13].classList.add("op0"); }
-function playAni2about() {
-        if (activateScale23 == 0) {
-    fa19[0].classList.remove("op0");
-    fa19[1].classList.remove("op0");
-    fa19[2].classList.remove("op0");
-    fa19[3].classList.remove("op0");
-    fa19[4].classList.remove("op0");
-    fa19[5].classList.remove("op0");
-    fa19[6].classList.remove("op0");
-    fa19[7].classList.remove("op0");
-    fa19[8].classList.remove("op0");
-    fa19[9].classList.remove("op0");
-    fa19[10].classList.remove("op0");
-    fa19[11].classList.remove("op0");
-    fa19[12].classList.remove("op0");
-    fa19[13].classList.remove("op0"); }
-        }
-function StopAni2about() {
-    fa19[0].classList.add("op0");
-    fa19[1].classList.add("op0");
-    fa19[2].classList.add("op0");
-    fa19[3].classList.add("op0");
-    fa19[4].classList.add("op0");
-    fa19[5].classList.add("op0");
-    fa19[6].classList.add("op0");
-    fa19[7].classList.add("op0");
-    fa19[8].classList.add("op0");
-    fa19[9].classList.add("op0");
-    fa19[10].classList.add("op0");
-    fa19[11].classList.add("op0");
-    fa19[12].classList.add("op0");
-    fa19[13].classList.add("op0"); }
+    function playAniabout() {
+        console.log("I work frank");
+        hov18.classList.add("style");
+        fa18[0].classList.remove("op0");
+        fa18[1].classList.remove("op0");
+        fa18[2].classList.remove("op0");
+        fa18[3].classList.remove("op0");
+        fa18[4].classList.remove("op0");
+        fa18[5].classList.remove("op0");
+        fa18[6].classList.remove("op0");
+        fa18[7].classList.remove("op0");
+        fa18[8].classList.remove("op0");
+        fa18[9].classList.remove("op0");
+        fa18[10].classList.remove("op0");
+        fa18[11].classList.remove("op0");
+        fa18[12].classList.remove("op0");
+        fa18[13].classList.remove("op0");
+    }
+
+    function StopAniabout() {
+        hov18.classList.remove("style");
+        fa18[0].classList.add("op0");
+        fa18[1].classList.add("op0");
+        fa18[2].classList.add("op0");
+        fa18[3].classList.add("op0");
+        fa18[4].classList.add("op0");
+        fa18[5].classList.add("op0");
+        fa18[6].classList.add("op0");
+        fa18[7].classList.add("op0");
+        fa18[8].classList.add("op0");
+        fa18[9].classList.add("op0");
+        fa18[10].classList.add("op0");
+        fa18[11].classList.add("op0");
+        fa18[12].classList.add("op0");
+        fa18[13].classList.add("op0");
+    }
+
+    function playAni2about() {
+        hov19.classList.add("style");
+        fa19[0].classList.remove("op0");
+        fa19[1].classList.remove("op0");
+        fa19[2].classList.remove("op0");
+        fa19[3].classList.remove("op0");
+        fa19[4].classList.remove("op0");
+        fa19[5].classList.remove("op0");
+        fa19[6].classList.remove("op0");
+        fa19[7].classList.remove("op0");
+        fa19[8].classList.remove("op0");
+        fa19[9].classList.remove("op0");
+        fa19[10].classList.remove("op0");
+        fa19[11].classList.remove("op0");
+        fa19[12].classList.remove("op0");
+        fa19[13].classList.remove("op0");
+    }
+
+    function StopAni2about() {
+        hov19.classList.remove("style");
+        fa19[0].classList.add("op0");
+        fa19[1].classList.add("op0");
+        fa19[2].classList.add("op0");
+        fa19[3].classList.add("op0");
+        fa19[4].classList.add("op0");
+        fa19[5].classList.add("op0");
+        fa19[6].classList.add("op0");
+        fa19[7].classList.add("op0");
+        fa19[8].classList.add("op0");
+        fa19[9].classList.add("op0");
+        fa19[10].classList.add("op0");
+        fa19[11].classList.add("op0");
+        fa19[12].classList.add("op0");
+        fa19[13].classList.add("op0");
+    }
 };
+
+//squares on click linked to project docs
+
+test01.addEventListener("click", function () {
+    window.location.href = "documentation/swissstyle/swiss-style-logo.pdf";
+});
+test02.addEventListener("click", function () {
+    window.location.href = "documentation/swissstyle/swiss-style-mood-board.pdf";
+});
+
+test1.addEventListener("click", function () {
+    window.location.href = "http://www.misschili.net/kea/redesign/index.html";
+});
+
+test2.addEventListener("click", function () {
+    window.location.href = "documentation/redesign/presentation-website-redesign.pdf";
+});
+
+test3.addEventListener("click", function () {
+    window.location.href = "documentation/misschili/Worksheet-MasaWu.pdf";
+});
+
+test4.addEventListener("click", function () {
+    window.location.href = "documentation/misschili/StyleTile-MasaWu.pdf";
+});
+
+test8.addEventListener("click", function () {
+    window.location.href = "documentation/code-snippets/animated-menu-code-snippet.pdf";
+});
+
+test9.addEventListener("click", function () {
+    window.location.href = "documentation/menu/style-tile_animated-menu.pdf";
+});
+
+test10.addEventListener("click", function () {
+    window.location.href = "documentation/drums/drums-code-snippet.pdf";
+});
+
+test11.addEventListener("click", function () {
+    window.location.href = "documentation/drums/style_tile_Masa-Wu_drums.pdf";
+});
+
+test12.addEventListener("click", function () {
+    window.location.href = "documentation/frankenstein/Summary-of-expert-test-frankenstein.pdf";
+});
+
+test13.addEventListener("click", function () {
+    window.location.href = "documentation/frankenstein/story-board-and-personas-collage.pdf";
+});
+
+/*
+test14.addEventListener("click", function(){
+    window.location.href = "../documentation/frankenstein/Summary-of-expert-test-frankenstein.pdf";
+});
+
+test15.addEventListener("click",function(){
+    window.location.href = "../documentation/frankenstein/story-board-and-personas-collage.pdf";
+});*/
 
 /*
 //font awesome iocons dissapear on text hover//
