@@ -484,201 +484,68 @@ window.onload = float();
 
 function float() {
     //swiss
-    fa3[0].classList.add("anime-me2");
-    fa3[1].classList.add("anime-me3");
-    fa3[2].classList.add("anime-me4");
-    fa3[3].classList.add("anime-me");
-    fa3[4].classList.add("anime-me2");
-    fa3[5].classList.add("anime-me3");
-    fa3[6].classList.add("anime-me5");
-    fa3[7].classList.add("anime-me");
-    fa3[8].classList.add("anime-me4");
-    fa3[9].classList.add("anime-me3");
-    fa3[10].classList.add("anime-me5");
-    fa3[11].classList.add("anime-me");
-    fa3[12].classList.add("anime-me2");
-    fa3[13].classList.add("anime-me5");
-    fa2[0].classList.add("anime-me2");
-    fa2[1].classList.add("anime-me3");
-    fa2[2].classList.add("anime-me4");
-    fa2[3].classList.add("anime-me");
-    fa2[4].classList.add("anime-me2");
-    fa2[5].classList.add("anime-me3");
-    fa2[6].classList.add("anime-me5");
-    fa2[7].classList.add("anime-me");
-    fa2[8].classList.add("anime-me4");
-    fa2[9].classList.add("anime-me3");
-    fa2[10].classList.add("anime-me5");
-    fa2[11].classList.add("anime-me");
-    fa2[12].classList.add("anime-me2");
-    fa2[13].classList.add("anime-me5");
+    fa3.forEach(f=>{
+        f.classList.add("anime-me"+(Math.floor(Math.random()*5)+1));
+    })
+    fa2.forEach(f=>{
+        f.classList.add("anime-me"+(Math.floor(Math.random()*5)+1));
+    })
     //redesign
-    fa5[0].classList.add("anime-me2");
-    fa5[1].classList.add("anime-me3");
-    fa5[2].classList.add("anime-me4");
-    fa5[3].classList.add("anime-me");
-    fa5[4].classList.add("anime-me2");
-    fa5[5].classList.add("anime-me3");
-    fa5[6].classList.add("anime-me5");
-    fa5[7].classList.add("anime-me");
-    fa5[8].classList.add("anime-me4");
-    fa5[9].classList.add("anime-me3");
-    fa5[10].classList.add("anime-me5");
-    fa5[11].classList.add("anime-me");
-    fa5[12].classList.add("anime-me2");
-    fa5[13].classList.add("anime-me5");
-    fa4[0].classList.add("anime-me2");
-    fa4[1].classList.add("anime-me3");
-    fa4[2].classList.add("anime-me4");
-    fa4[3].classList.add("anime-me");
-    fa4[4].classList.add("anime-me2");
-    fa4[5].classList.add("anime-me3");
-    fa4[6].classList.add("anime-me5");
-    fa4[7].classList.add("anime-me");
-    fa4[8].classList.add("anime-me4");
-    fa4[9].classList.add("anime-me3");
-    fa4[10].classList.add("anime-me5");
-    fa4[11].classList.add("anime-me");
-    fa4[12].classList.add("anime-me2");
-    fa4[13].classList.add("anime-me5");
-
+    fa5.forEach(f=>{
+        f.classList.add("anime-me"+(Math.floor(Math.random()*5)+1));
+    })
+    fa4.forEach(f=>{
+        f.classList.add("anime-me"+(Math.floor(Math.random()*5)+1));
+    })
 };
 
 function playAni() {
     //swiss
     hov01.classList.add("style");
-    fa3[0].classList.remove("op0");
-    fa3[1].classList.remove("op0");
-    fa3[2].classList.remove("op0");
-    fa3[3].classList.remove("op0");
-    fa3[4].classList.remove("op0");
-    fa3[5].classList.remove("op0");
-    fa3[6].classList.remove("op0");
-    fa3[7].classList.remove("op0");
-    fa3[8].classList.remove("op0");
-    fa3[9].classList.remove("op0");
-    fa3[10].classList.remove("op0");
-    fa3[11].classList.remove("op0");
-    fa3[12].classList.remove("op0");
-    fa3[13].classList.remove("op0");
+    fa3.forEach(f=>{
+    f.classList.remove("op0");
+    })
     //redesign
     hov1.classList.add("style");
-    fa4[0].classList.remove("op0");
-    fa4[1].classList.remove("op0");
-    fa4[2].classList.remove("op0");
-    fa4[3].classList.remove("op0");
-    fa4[4].classList.remove("op0");
-    fa4[5].classList.remove("op0");
-    fa4[6].classList.remove("op0");
-    fa4[7].classList.remove("op0");
-    fa4[8].classList.remove("op0");
-    fa4[9].classList.remove("op0");
-    fa4[10].classList.remove("op0");
-    fa4[11].classList.remove("op0");
-    fa4[12].classList.remove("op0");
-    fa4[13].classList.remove("op0");
+    fa4.forEach(f=>{
+    f.classList.remove("op0");
+    })
 }
 
 function StopAni() {
     hov01.classList.remove("style");
-    fa3[0].classList.add("op0");
-    fa3[1].classList.add("op0");
-    fa3[2].classList.add("op0");
-    fa3[3].classList.add("op0");
-    fa3[4].classList.add("op0");
-    fa3[5].classList.add("op0");
-    fa3[6].classList.add("op0");
-    fa3[7].classList.add("op0");
-    fa3[8].classList.add("op0");
-    fa3[9].classList.add("op0");
-    fa3[10].classList.add("op0");
-    fa3[11].classList.add("op0");
-    fa3[12].classList.add("op0");
-    fa3[13].classList.add("op0");
+    fa3.forEach(f=>{
+    f.classList.add("op0");
+    })
     //reddesign
     hov1.classList.remove("style");
-    fa4[0].classList.add("op0");
-    fa4[1].classList.add("op0");
-    fa4[2].classList.add("op0");
-    fa4[3].classList.add("op0");
-    fa4[4].classList.add("op0");
-    fa4[5].classList.add("op0");
-    fa4[6].classList.add("op0");
-    fa4[7].classList.add("op0");
-    fa4[8].classList.add("op0");
-    fa4[9].classList.add("op0");
-    fa4[10].classList.add("op0");
-    fa4[11].classList.add("op0");
-    fa4[12].classList.add("op0");
-    fa4[13].classList.add("op0");
+    fa4.forEach(f=>{
+    f.classList.add("op0");
+    })
 }
 
 function playAni2() {
     hov02.classList.add("style");
-    fa2[0].classList.remove("op0");
-    fa2[1].classList.remove("op0");
-    fa2[2].classList.remove("op0");
-    fa2[3].classList.remove("op0");
-    fa2[4].classList.remove("op0");
-    fa2[5].classList.remove("op0");
-    fa2[6].classList.remove("op0");
-    fa2[7].classList.remove("op0");
-    fa2[8].classList.remove("op0");
-    fa2[9].classList.remove("op0");
-    fa2[10].classList.remove("op0");
-    fa2[11].classList.remove("op0");
-    fa2[12].classList.remove("op0");
-    fa2[13].classList.remove("op0");
+    fa2.forEach(f=>{
+    f.classList.remove("op0");
+    })
     //redesign
     hov2.classList.add("style");
-    fa5[0].classList.remove("op0");
-    fa5[1].classList.remove("op0");
-    fa5[2].classList.remove("op0");
-    fa5[3].classList.remove("op0");
-    fa5[4].classList.remove("op0");
-    fa5[5].classList.remove("op0");
-    fa5[6].classList.remove("op0");
-    fa5[7].classList.remove("op0");
-    fa5[8].classList.remove("op0");
-    fa5[9].classList.remove("op0");
-    fa5[10].classList.remove("op0");
-    fa5[11].classList.remove("op0");
-    fa5[12].classList.remove("op0");
-    fa5[13].classList.remove("op0");
+    fa5.forEach(f=>{
+    f.classList.remove("op0");
+    })
 }
 
 function StopAni2() {
     hov02.classList.remove("style");
-    fa2[0].classList.add("op0");
-    fa2[1].classList.add("op0");
-    fa2[2].classList.add("op0");
-    fa2[3].classList.add("op0");
-    fa2[4].classList.add("op0");
-    fa2[5].classList.add("op0");
-    fa2[6].classList.add("op0");
-    fa2[7].classList.add("op0");
-    fa2[8].classList.add("op0");
-    fa2[9].classList.add("op0");
-    fa2[10].classList.add("op0");
-    fa2[11].classList.add("op0");
-    fa2[12].classList.add("op0");
-    fa2[13].classList.add("op0");
+    fa2.forEach(f=>{
+    f.classList.add("op0");
+    })
     //redesign
     hov2.classList.remove("style");
-    fa5[0].classList.add("op0");
-    fa5[1].classList.add("op0");
-    fa5[2].classList.add("op0");
-    fa5[3].classList.add("op0");
-    fa5[4].classList.add("op0");
-    fa5[5].classList.add("op0");
-    fa5[6].classList.add("op0");
-    fa5[7].classList.add("op0");
-    fa5[8].classList.add("op0");
-    fa5[9].classList.add("op0");
-    fa5[10].classList.add("op0");
-    fa5[11].classList.add("op0");
-    fa5[12].classList.add("op0");
-    fa5[13].classList.add("op0");
+    fa5.forEach(f=>{
+    f.classList.add("op0");
+    })
 }
 let test1 = document.querySelector(".test1");
 let test2 = document.querySelector(".test2");
@@ -694,34 +561,13 @@ let hov4 = document.querySelector(".hov4");
 misschili.addEventListener("transitionend", float3);
 
 function float3() {
-    fa6[0].classList.add("anime-me2");
-    fa6[1].classList.add("anime-me3");
-    fa6[2].classList.add("anime-me4");
-    fa6[3].classList.add("anime-me");
-    fa6[4].classList.add("anime-me2");
-    fa6[5].classList.add("anime-me3");
-    fa6[6].classList.add("anime-me5");
-    fa6[7].classList.add("anime-me");
-    fa6[8].classList.add("anime-me4");
-    fa6[9].classList.add("anime-me3");
-    fa6[10].classList.add("anime-me5");
-    fa6[11].classList.add("anime-me");
-    fa6[12].classList.add("anime-me2");
-    fa6[13].classList.add("anime-me5");
-    fa7[0].classList.add("anime-me2");
-    fa7[1].classList.add("anime-me3");
-    fa7[2].classList.add("anime-me4");
-    fa7[3].classList.add("anime-me");
-    fa7[4].classList.add("anime-me2");
-    fa7[5].classList.add("anime-me3");
-    fa7[6].classList.add("anime-me5");
-    fa7[7].classList.add("anime-me");
-    fa7[8].classList.add("anime-me4");
-    fa7[9].classList.add("anime-me3");
-    fa7[10].classList.add("anime-me5");
-    fa7[11].classList.add("anime-me");
-    fa7[12].classList.add("anime-me2");
-    fa7[13].classList.add("anime-me5");
+    //interactive animation
+    fa6.forEach(f=>{
+        f.classList.add("anime-me"+(Math.floor(Math.random()*5)+1));
+    })
+    fa7.forEach(f=>{
+        f.classList.add("anime-me"+(Math.floor(Math.random()*5)+1));
+    })
 
     test3.addEventListener('mouseenter', playAnimisschili);
     test3.addEventListener('mouseleave', StopAnimisschili);
@@ -731,74 +577,28 @@ function float3() {
     function playAnimisschili() {
         console.log("I work");
         hov3.classList.add("style");
-        fa6[0].classList.remove("op0");
-        fa6[1].classList.remove("op0");
-        fa6[2].classList.remove("op0");
-        fa6[3].classList.remove("op0");
-        fa6[4].classList.remove("op0");
-        fa6[5].classList.remove("op0");
-        fa6[6].classList.remove("op0");
-        fa6[7].classList.remove("op0");
-        fa6[8].classList.remove("op0");
-        fa6[9].classList.remove("op0");
-        fa6[10].classList.remove("op0");
-        fa6[11].classList.remove("op0");
-        fa6[12].classList.remove("op0");
-        fa6[13].classList.remove("op0");
+        fa6.forEach(f=>f.classList.remove("op0"))
     }
 
     function StopAnimisschili() {
         hov3.classList.remove("style");
-        fa6[0].classList.add("op0");
-        fa6[1].classList.add("op0");
-        fa6[2].classList.add("op0");
-        fa6[3].classList.add("op0");
-        fa6[4].classList.add("op0");
-        fa6[5].classList.add("op0");
-        fa6[6].classList.add("op0");
-        fa6[7].classList.add("op0");
-        fa6[8].classList.add("op0");
-        fa6[9].classList.add("op0");
-        fa6[10].classList.add("op0");
-        fa6[11].classList.add("op0");
-        fa6[12].classList.add("op0");
-        fa6[13].classList.add("op0");
+        fa6.forEach(f=>{
+    f.classList.add("op0");
+    })
     }
 
     function playAni2misschili() {
         hov4.classList.add("style");
-        fa7[0].classList.remove("op0");
-        fa7[1].classList.remove("op0");
-        fa7[2].classList.remove("op0");
-        fa7[3].classList.remove("op0");
-        fa7[4].classList.remove("op0");
-        fa7[5].classList.remove("op0");
-        fa7[6].classList.remove("op0");
-        fa7[7].classList.remove("op0");
-        fa7[8].classList.remove("op0");
-        fa7[9].classList.remove("op0");
-        fa7[10].classList.remove("op0");
-        fa7[11].classList.remove("op0");
-        fa7[12].classList.remove("op0");
-        fa7[13].classList.remove("op0");
+        fa7.forEach(f=>{
+    f.classList.remove("op0");
+    })
     }
 
     function StopAni2misschili() {
         hov4.classList.remove("style");
-        fa7[0].classList.add("op0");
-        fa7[1].classList.add("op0");
-        fa7[2].classList.add("op0");
-        fa7[3].classList.add("op0");
-        fa7[4].classList.add("op0");
-        fa7[5].classList.add("op0");
-        fa7[6].classList.add("op0");
-        fa7[7].classList.add("op0");
-        fa7[8].classList.add("op0");
-        fa7[9].classList.add("op0");
-        fa7[10].classList.add("op0");
-        fa7[11].classList.add("op0");
-        fa7[12].classList.add("op0");
-        fa7[13].classList.add("op0");
+        fa7.forEach(f=>{
+    f.classList.add("op0");
+    })
     }
 };
 
@@ -810,35 +610,14 @@ let hov9 = document.querySelector(".hov9");
 menu2.addEventListener("transitionend", float4);
 
 function float4() {
-    console.log("menu")
-    fa8[0].classList.add("anime-me2");
-    fa8[1].classList.add("anime-me3");
-    fa8[2].classList.add("anime-me4");
-    fa8[3].classList.add("anime-me");
-    fa8[4].classList.add("anime-me2");
-    fa8[5].classList.add("anime-me3");
-    fa8[6].classList.add("anime-me5");
-    fa8[7].classList.add("anime-me");
-    fa8[8].classList.add("anime-me4");
-    fa8[9].classList.add("anime-me3");
-    fa8[10].classList.add("anime-me5");
-    fa8[11].classList.add("anime-me");
-    fa8[12].classList.add("anime-me2");
-    fa8[13].classList.add("anime-me5");
-    fa9[0].classList.add("anime-me2");
-    fa9[1].classList.add("anime-me3");
-    fa9[2].classList.add("anime-me4");
-    fa9[3].classList.add("anime-me");
-    fa9[4].classList.add("anime-me2");
-    fa9[5].classList.add("anime-me3");
-    fa9[6].classList.add("anime-me5");
-    fa9[7].classList.add("anime-me");
-    fa9[8].classList.add("anime-me4");
-    fa9[9].classList.add("anime-me3");
-    fa9[10].classList.add("anime-me5");
-    fa9[11].classList.add("anime-me");
-    fa9[12].classList.add("anime-me2");
-    fa9[13].classList.add("anime-me5");
+    // project pool 1
+    fa8.forEach(f=>{
+        f.classList.add("anime-me"+(Math.floor(Math.random()*5)+1));
+    })
+
+    fa9.forEach(f=>{
+        f.classList.add("anime-me"+(Math.floor(Math.random()*5)+1));
+    })
 
     test8.addEventListener('mouseenter', playAnimenu);
     test8.addEventListener('mouseleave', StopAnimenu);
@@ -846,76 +625,36 @@ function float4() {
     test9.addEventListener('mouseleave', StopAni2menu);
 
     function playAnimenu() {
+
+
         console.log("I work menu");
         hov8.classList.add("style");
-        fa8[0].classList.remove("op0");
-        fa8[1].classList.remove("op0");
-        fa8[2].classList.remove("op0");
-        fa8[3].classList.remove("op0");
-        fa8[4].classList.remove("op0");
-        fa8[5].classList.remove("op0");
-        fa8[6].classList.remove("op0");
-        fa8[7].classList.remove("op0");
-        fa8[8].classList.remove("op0");
-        fa8[9].classList.remove("op0");
-        fa8[10].classList.remove("op0");
-        fa8[11].classList.remove("op0");
-        fa8[12].classList.remove("op0");
-        fa8[13].classList.remove("op0");
+        fa8.forEach(f=>{
+    f.classList.remove("op0");
+    })
     }
 
     function StopAnimenu() {
         hov8.classList.remove("style");
-        fa8[0].classList.add("op0");
-        fa8[1].classList.add("op0");
-        fa8[2].classList.add("op0");
-        fa8[3].classList.add("op0");
-        fa8[4].classList.add("op0");
-        fa8[5].classList.add("op0");
-        fa8[6].classList.add("op0");
-        fa8[7].classList.add("op0");
-        fa8[8].classList.add("op0");
-        fa8[9].classList.add("op0");
-        fa8[10].classList.add("op0");
-        fa8[11].classList.add("op0");
-        fa8[12].classList.add("op0");
-        fa8[13].classList.add("op0");
+
+        fa8.forEach(f=>{
+    f.classList.add("op0");
+    })
     }
 
     function playAni2menu() {
         hov9.classList.add("style");
-        fa9[0].classList.remove("op0");
-        fa9[1].classList.remove("op0");
-        fa9[2].classList.remove("op0");
-        fa9[3].classList.remove("op0");
-        fa9[4].classList.remove("op0");
-        fa9[5].classList.remove("op0");
-        fa9[6].classList.remove("op0");
-        fa9[7].classList.remove("op0");
-        fa9[8].classList.remove("op0");
-        fa9[9].classList.remove("op0");
-        fa9[10].classList.remove("op0");
-        fa9[11].classList.remove("op0");
-        fa9[12].classList.remove("op0");
-        fa9[13].classList.remove("op0");
+
+        fa9.forEach(f=>{
+    f.classList.remove("op0");
+    })
     }
 
     function StopAni2menu() {
         hov9.classList.remove("style");
-        fa9[0].classList.add("op0");
-        fa9[1].classList.add("op0");
-        fa9[2].classList.add("op0");
-        fa9[3].classList.add("op0");
-        fa9[4].classList.add("op0");
-        fa9[5].classList.add("op0");
-        fa9[6].classList.add("op0");
-        fa9[7].classList.add("op0");
-        fa9[8].classList.add("op0");
-        fa9[9].classList.add("op0");
-        fa9[10].classList.add("op0");
-        fa9[11].classList.add("op0");
-        fa9[12].classList.add("op0");
-        fa9[13].classList.add("op0");
+        fa9.forEach(f=>{
+    f.classList.add("op0");
+    })
     }
 };
 
@@ -927,35 +666,14 @@ let hov11 = document.querySelector(".hov11");
 drum.addEventListener("transitionend", float5);
 
 function float5() {
-    console.log("drum")
-    fa10[0].classList.add("anime-me2");
-    fa10[1].classList.add("anime-me3");
-    fa10[2].classList.add("anime-me4");
-    fa10[3].classList.add("anime-me");
-    fa10[4].classList.add("anime-me2");
-    fa10[5].classList.add("anime-me3");
-    fa10[6].classList.add("anime-me5");
-    fa10[7].classList.add("anime-me");
-    fa10[8].classList.add("anime-me4");
-    fa10[9].classList.add("anime-me3");
-    fa10[10].classList.add("anime-me5");
-    fa10[11].classList.add("anime-me");
-    fa10[12].classList.add("anime-me2");
-    fa10[13].classList.add("anime-me5");
-    fa11[0].classList.add("anime-me2");
-    fa11[1].classList.add("anime-me3");
-    fa11[2].classList.add("anime-me4");
-    fa11[3].classList.add("anime-me");
-    fa11[4].classList.add("anime-me2");
-    fa11[5].classList.add("anime-me3");
-    fa11[6].classList.add("anime-me5");
-    fa11[7].classList.add("anime-me");
-    fa11[8].classList.add("anime-me4");
-    fa11[9].classList.add("anime-me3");
-    fa11[10].classList.add("anime-me5");
-    fa11[11].classList.add("anime-me");
-    fa11[12].classList.add("anime-me2");
-    fa11[13].classList.add("anime-me5");
+     // project pool 2 - drum
+    fa10.forEach(f=>{
+        f.classList.add("anime-me"+(Math.floor(Math.random()*5)+1));
+    })
+
+    fa11.forEach(f=>{
+        f.classList.add("anime-me"+(Math.floor(Math.random()*5)+1));
+    })
 
     test10.addEventListener('mouseenter', playAnidrum);
     test10.addEventListener('mouseleave', StopAnidrum);
@@ -965,74 +683,30 @@ function float5() {
     function playAnidrum() {
         console.log("I work menu");
         hov10.classList.add("style");
-        fa10[0].classList.remove("op0");
-        fa10[1].classList.remove("op0");
-        fa10[2].classList.remove("op0");
-        fa10[3].classList.remove("op0");
-        fa10[4].classList.remove("op0");
-        fa10[5].classList.remove("op0");
-        fa10[6].classList.remove("op0");
-        fa10[7].classList.remove("op0");
-        fa10[8].classList.remove("op0");
-        fa10[9].classList.remove("op0");
-        fa10[10].classList.remove("op0");
-        fa10[11].classList.remove("op0");
-        fa10[12].classList.remove("op0");
-        fa10[13].classList.remove("op0");
+        fa10.forEach(f=>{
+    f.classList.remove("op0");
+    })
     }
 
     function StopAnidrum() {
         hov10.classList.remove("style");
-        fa10[0].classList.add("op0");
-        fa10[1].classList.add("op0");
-        fa10[2].classList.add("op0");
-        fa10[3].classList.add("op0");
-        fa10[4].classList.add("op0");
-        fa10[5].classList.add("op0");
-        fa10[6].classList.add("op0");
-        fa10[7].classList.add("op0");
-        fa10[8].classList.add("op0");
-        fa10[9].classList.add("op0");
-        fa10[10].classList.add("op0");
-        fa10[11].classList.add("op0");
-        fa10[12].classList.add("op0");
-        fa10[13].classList.add("op0");
+        fa10.forEach(f=>{
+    f.classList.add("op0");
+    })
     }
 
     function playAni2drum() {
         hov11.classList.add("style");
-        fa11[0].classList.remove("op0");
-        fa11[1].classList.remove("op0");
-        fa11[2].classList.remove("op0");
-        fa11[3].classList.remove("op0");
-        fa11[4].classList.remove("op0");
-        fa11[5].classList.remove("op0");
-        fa11[6].classList.remove("op0");
-        fa11[7].classList.remove("op0");
-        fa11[8].classList.remove("op0");
-        fa11[9].classList.remove("op0");
-        fa11[10].classList.remove("op0");
-        fa11[11].classList.remove("op0");
-        fa11[12].classList.remove("op0");
-        fa11[13].classList.remove("op0");
+        fa11.forEach(f=>{
+    f.classList.remove("op0");
+    })
     }
 
     function StopAni2drum() {
         hov11.classList.remove("style");
-        fa11[0].classList.add("op0");
-        fa11[1].classList.add("op0");
-        fa11[2].classList.add("op0");
-        fa11[3].classList.add("op0");
-        fa11[4].classList.add("op0");
-        fa11[5].classList.add("op0");
-        fa11[6].classList.add("op0");
-        fa11[7].classList.add("op0");
-        fa11[8].classList.add("op0");
-        fa11[9].classList.add("op0");
-        fa11[10].classList.add("op0");
-        fa11[11].classList.add("op0");
-        fa11[12].classList.add("op0");
-        fa11[13].classList.add("op0");
+        fa11.forEach(f=>{
+    f.classList.add("op0");
+    })
     }
 };
 
@@ -1045,35 +719,15 @@ let hov13 = document.querySelector(".hov13");
 frank.addEventListener("transitionend", float6);
 
 function float6() {
-    console.log("frank")
-    fa12[0].classList.add("anime-me2");
-    fa12[1].classList.add("anime-me3");
-    fa12[2].classList.add("anime-me4");
-    fa12[3].classList.add("anime-me");
-    fa12[4].classList.add("anime-me2");
-    fa12[5].classList.add("anime-me3");
-    fa12[6].classList.add("anime-me5");
-    fa12[7].classList.add("anime-me");
-    fa12[8].classList.add("anime-me4");
-    fa12[9].classList.add("anime-me3");
-    fa12[10].classList.add("anime-me5");
-    fa12[11].classList.add("anime-me");
-    fa12[12].classList.add("anime-me2");
-    fa12[13].classList.add("anime-me5");
-    fa13[0].classList.add("anime-me2");
-    fa13[1].classList.add("anime-me3");
-    fa13[2].classList.add("anime-me4");
-    fa13[3].classList.add("anime-me");
-    fa13[4].classList.add("anime-me2");
-    fa13[5].classList.add("anime-me3");
-    fa13[6].classList.add("anime-me5");
-    fa13[7].classList.add("anime-me");
-    fa13[8].classList.add("anime-me4");
-    fa13[9].classList.add("anime-me3");
-    fa13[10].classList.add("anime-me5");
-    fa13[11].classList.add("anime-me");
-    fa13[12].classList.add("anime-me2");
-    fa13[13].classList.add("anime-me5");
+
+     // frankenstein
+    fa12.forEach(f=>{
+        f.classList.add("anime-me"+(Math.floor(Math.random()*5)+1));
+    })
+
+    fa13.forEach(f=>{
+        f.classList.add("anime-me"+(Math.floor(Math.random()*5)+1));
+    })
 
     test12.addEventListener('mouseenter', playAnifrank);
     test12.addEventListener('mouseleave', StopAnifrank);
@@ -1083,74 +737,30 @@ function float6() {
     function playAnifrank() {
         console.log("I work frank");
         hov12.classList.add("style");
-        fa12[0].classList.remove("op0");
-        fa12[1].classList.remove("op0");
-        fa12[2].classList.remove("op0");
-        fa12[3].classList.remove("op0");
-        fa12[4].classList.remove("op0");
-        fa12[5].classList.remove("op0");
-        fa12[6].classList.remove("op0");
-        fa12[7].classList.remove("op0");
-        fa12[8].classList.remove("op0");
-        fa12[9].classList.remove("op0");
-        fa12[10].classList.remove("op0");
-        fa12[11].classList.remove("op0");
-        fa12[12].classList.remove("op0");
-        fa12[13].classList.remove("op0");
+        fa12.forEach(f=>{
+    f.classList.remove("op0");
+    })
     }
 
     function StopAnifrank() {
         hov12.classList.remove("style");
-        fa12[0].classList.add("op0");
-        fa12[1].classList.add("op0");
-        fa12[2].classList.add("op0");
-        fa12[3].classList.add("op0");
-        fa12[4].classList.add("op0");
-        fa12[5].classList.add("op0");
-        fa12[6].classList.add("op0");
-        fa12[7].classList.add("op0");
-        fa12[8].classList.add("op0");
-        fa12[9].classList.add("op0");
-        fa12[10].classList.add("op0");
-        fa12[11].classList.add("op0");
-        fa12[12].classList.add("op0");
-        fa12[13].classList.add("op0");
+        fa12.forEach(f=>{
+    f.classList.add("op0");
+    })
     }
 
     function playAni2frank() {
         hov13.classList.add("style");
-        fa13[0].classList.remove("op0");
-        fa13[1].classList.remove("op0");
-        fa13[2].classList.remove("op0");
-        fa13[3].classList.remove("op0");
-        fa13[4].classList.remove("op0");
-        fa13[5].classList.remove("op0");
-        fa13[6].classList.remove("op0");
-        fa13[7].classList.remove("op0");
-        fa13[8].classList.remove("op0");
-        fa13[9].classList.remove("op0");
-        fa13[10].classList.remove("op0");
-        fa13[11].classList.remove("op0");
-        fa13[12].classList.remove("op0");
-        fa13[13].classList.remove("op0");
+        fa13.forEach(f=>{
+    f.classList.remove("op0");
+    })
     }
 
     function StopAni2frank() {
         hov13.classList.remove("style");
-        fa13[0].classList.add("op0");
-        fa13[1].classList.add("op0");
-        fa13[2].classList.add("op0");
-        fa13[3].classList.add("op0");
-        fa13[4].classList.add("op0");
-        fa13[5].classList.add("op0");
-        fa13[6].classList.add("op0");
-        fa13[7].classList.add("op0");
-        fa13[8].classList.add("op0");
-        fa13[9].classList.add("op0");
-        fa13[10].classList.add("op0");
-        fa13[11].classList.add("op0");
-        fa13[12].classList.add("op0");
-        fa13[13].classList.add("op0");
+        fa13.forEach(f=>{
+    f.classList.add("op0");
+    })
     }
 };
 
@@ -1161,35 +771,14 @@ let hov14 = document.querySelector(".hov14");
 viewfinders.addEventListener("transitionend", float7);
 
 function float7() {
-    console.log("view")
-    fa14[0].classList.add("anime-me2");
-    fa14[1].classList.add("anime-me3");
-    fa14[2].classList.add("anime-me4");
-    fa14[3].classList.add("anime-me");
-    fa14[4].classList.add("anime-me2");
-    fa14[5].classList.add("anime-me3");
-    fa14[6].classList.add("anime-me5");
-    fa14[7].classList.add("anime-me");
-    fa14[8].classList.add("anime-me4");
-    fa14[9].classList.add("anime-me3");
-    fa14[10].classList.add("anime-me5");
-    fa14[11].classList.add("anime-me");
-    fa14[12].classList.add("anime-me2");
-    fa14[13].classList.add("anime-me5");
-    fa15[0].classList.add("anime-me2");
-    fa15[1].classList.add("anime-me3");
-    fa15[2].classList.add("anime-me4");
-    fa15[3].classList.add("anime-me");
-    fa15[4].classList.add("anime-me2");
-    fa15[5].classList.add("anime-me3");
-    fa15[6].classList.add("anime-me5");
-    fa15[7].classList.add("anime-me");
-    fa15[8].classList.add("anime-me4");
-    fa15[9].classList.add("anime-me3");
-    fa15[10].classList.add("anime-me5");
-    fa15[11].classList.add("anime-me");
-    fa15[12].classList.add("anime-me2");
-    fa15[13].classList.add("anime-me5");
+    // viewfinders
+    fa14.forEach(f=>{
+        f.classList.add("anime-me"+(Math.floor(Math.random()*5)+1));
+    })
+
+    fa15.forEach(f=>{
+        f.classList.add("anime-me"+(Math.floor(Math.random()*5)+1));
+    })
 
     let test14 = document.querySelector(".test14");
     let test15 = document.querySelector(".test15");
@@ -1201,76 +790,32 @@ function float7() {
     function playAniview() {
         console.log("I work frank");
         hov14.classList.add("style");
-        fa14[0].classList.remove("op0");
-        fa14[1].classList.remove("op0");
-        fa14[2].classList.remove("op0");
-        fa14[3].classList.remove("op0");
-        fa14[4].classList.remove("op0");
-        fa14[5].classList.remove("op0");
-        fa14[6].classList.remove("op0");
-        fa14[7].classList.remove("op0");
-        fa14[8].classList.remove("op0");
-        fa14[9].classList.remove("op0");
-        fa14[10].classList.remove("op0");
-        fa14[11].classList.remove("op0");
-        fa14[12].classList.remove("op0");
-        fa14[13].classList.remove("op0");
+        fa14.forEach(f=>{
+    f.classList.remove("op0");
+    })
     }
 
     function StopAniview() {
         hov14.classList.remove("style");
-        fa14[0].classList.add("op0");
-        fa14[1].classList.add("op0");
-        fa14[2].classList.add("op0");
-        fa14[3].classList.add("op0");
-        fa14[4].classList.add("op0");
-        fa14[5].classList.add("op0");
-        fa14[6].classList.add("op0");
-        fa14[7].classList.add("op0");
-        fa14[8].classList.add("op0");
-        fa14[9].classList.add("op0");
-        fa14[10].classList.add("op0");
-        fa14[11].classList.add("op0");
-        fa14[12].classList.add("op0");
-        fa14[13].classList.add("op0");
+        fa14.forEach(f=>{
+    f.classList.add("op0");
+    })
     }
 
     function playAni2view() {
         hov15a.classList.add("style");
         hov15.classList.add("style");
-        fa15[0].classList.remove("op0");
-        fa15[1].classList.remove("op0");
-        fa15[2].classList.remove("op0");
-        fa15[3].classList.remove("op0");
-        fa15[4].classList.remove("op0");
-        fa15[5].classList.remove("op0");
-        fa15[6].classList.remove("op0");
-        fa15[7].classList.remove("op0");
-        fa15[8].classList.remove("op0");
-        fa15[9].classList.remove("op0");
-        fa15[10].classList.remove("op0");
-        fa15[11].classList.remove("op0");
-        fa15[12].classList.remove("op0");
-        fa15[13].classList.remove("op0");
+        fa15.forEach(f=>{
+    f.classList.remove("op0");
+    })
     }
 
     function StopAni2view() {
         hov15a.classList.remove("style");
         hov15.classList.remove("style");
-        fa15[0].classList.add("op0");
-        fa15[1].classList.add("op0");
-        fa15[2].classList.add("op0");
-        fa15[3].classList.add("op0");
-        fa15[4].classList.add("op0");
-        fa15[5].classList.add("op0");
-        fa15[6].classList.add("op0");
-        fa15[7].classList.add("op0");
-        fa15[8].classList.add("op0");
-        fa15[9].classList.add("op0");
-        fa15[10].classList.add("op0");
-        fa15[11].classList.add("op0");
-        fa15[12].classList.add("op0");
-        fa15[13].classList.add("op0");
+        fa15.forEach(f=>{
+    f.classList.add("op0");
+    })
     }
 };
 
@@ -1281,35 +826,14 @@ let hov17 = document.querySelector(".hov17");
 video.addEventListener("transitionend", float8);
 
 function float8() {
-    console.log("video")
-    fa16[0].classList.add("anime-me2");
-    fa16[1].classList.add("anime-me3");
-    fa16[2].classList.add("anime-me4");
-    fa16[3].classList.add("anime-me");
-    fa16[4].classList.add("anime-me2");
-    fa16[5].classList.add("anime-me3");
-    fa16[6].classList.add("anime-me5");
-    fa16[7].classList.add("anime-me");
-    fa16[8].classList.add("anime-me4");
-    fa16[9].classList.add("anime-me3");
-    fa16[10].classList.add("anime-me5");
-    fa16[11].classList.add("anime-me");
-    fa16[12].classList.add("anime-me2");
-    fa16[13].classList.add("anime-me5");
-    fa17[0].classList.add("anime-me2");
-    fa17[1].classList.add("anime-me3");
-    fa17[2].classList.add("anime-me4");
-    fa17[3].classList.add("anime-me");
-    fa17[4].classList.add("anime-me2");
-    fa17[5].classList.add("anime-me3");
-    fa17[6].classList.add("anime-me5");
-    fa17[7].classList.add("anime-me");
-    fa17[8].classList.add("anime-me4");
-    fa17[9].classList.add("anime-me3");
-    fa17[10].classList.add("anime-me5");
-    fa17[11].classList.add("anime-me");
-    fa17[12].classList.add("anime-me2");
-    fa17[13].classList.add("anime-me5");
+     // video
+    fa16.forEach(f=>{
+        f.classList.add("anime-me"+(Math.floor(Math.random()*5)+1));
+    })
+
+    fa17.forEach(f=>{
+        f.classList.add("anime-me"+(Math.floor(Math.random()*5)+1));
+    })
 
     let test16 = document.querySelector(".test16");
     let test17 = document.querySelector(".test17");
@@ -1321,74 +845,30 @@ function float8() {
     function playAnivid() {
         console.log("I work frank");
         hov16.classList.add("style");
-        fa16[0].classList.remove("op0");
-        fa16[1].classList.remove("op0");
-        fa16[2].classList.remove("op0");
-        fa16[3].classList.remove("op0");
-        fa16[4].classList.remove("op0");
-        fa16[5].classList.remove("op0");
-        fa16[6].classList.remove("op0");
-        fa16[7].classList.remove("op0");
-        fa16[8].classList.remove("op0");
-        fa16[9].classList.remove("op0");
-        fa16[10].classList.remove("op0");
-        fa16[11].classList.remove("op0");
-        fa16[12].classList.remove("op0");
-        fa16[13].classList.remove("op0");
+        fa16.forEach(f=>{
+    f.classList.remove("op0");
+    })
     }
 
     function StopAnivid() {
         hov16.classList.remove("style");
-        fa16[0].classList.add("op0");
-        fa16[1].classList.add("op0");
-        fa16[2].classList.add("op0");
-        fa16[3].classList.add("op0");
-        fa16[4].classList.add("op0");
-        fa16[5].classList.add("op0");
-        fa16[6].classList.add("op0");
-        fa16[7].classList.add("op0");
-        fa16[8].classList.add("op0");
-        fa16[9].classList.add("op0");
-        fa16[10].classList.add("op0");
-        fa16[11].classList.add("op0");
-        fa16[12].classList.add("op0");
-        fa16[13].classList.add("op0");
+        fa16.forEach(f=>{
+    f.classList.add("op0");
+    })
     }
 
     function playAni2vid() {
         hov17.classList.add("style");
-        fa17[0].classList.remove("op0");
-        fa17[1].classList.remove("op0");
-        fa17[2].classList.remove("op0");
-        fa17[3].classList.remove("op0");
-        fa17[4].classList.remove("op0");
-        fa17[5].classList.remove("op0");
-        fa17[6].classList.remove("op0");
-        fa17[7].classList.remove("op0");
-        fa17[8].classList.remove("op0");
-        fa17[9].classList.remove("op0");
-        fa17[10].classList.remove("op0");
-        fa17[11].classList.remove("op0");
-        fa17[12].classList.remove("op0");
-        fa17[13].classList.remove("op0");
+        fa17.forEach(f=>{
+    f.classList.remove("op0");
+    })
     }
 
     function StopAni2vid() {
         hov17.classList.remove("style");
-        fa17[0].classList.add("op0");
-        fa17[1].classList.add("op0");
-        fa17[2].classList.add("op0");
-        fa17[3].classList.add("op0");
-        fa17[4].classList.add("op0");
-        fa17[5].classList.add("op0");
-        fa17[6].classList.add("op0");
-        fa17[7].classList.add("op0");
-        fa17[8].classList.add("op0");
-        fa17[9].classList.add("op0");
-        fa17[10].classList.add("op0");
-        fa17[11].classList.add("op0");
-        fa17[12].classList.add("op0");
-        fa17[13].classList.add("op0");
+        fa17.forEach(f=>{
+    f.classList.add("op0");
+    })
     }
 };
 
@@ -1399,34 +879,14 @@ about.addEventListener("transitionend", float9);
 
 function float9() {
     console.log("about")
-    fa18[0].classList.add("anime-me2");
-    fa18[1].classList.add("anime-me3");
-    fa18[2].classList.add("anime-me4");
-    fa18[3].classList.add("anime-me");
-    fa18[4].classList.add("anime-me2");
-    fa18[5].classList.add("anime-me3");
-    fa18[6].classList.add("anime-me5");
-    fa18[7].classList.add("anime-me");
-    fa18[8].classList.add("anime-me4");
-    fa18[9].classList.add("anime-me3");
-    fa18[10].classList.add("anime-me5");
-    fa18[11].classList.add("anime-me");
-    fa18[12].classList.add("anime-me2");
-    fa18[13].classList.add("anime-me5");
-    fa19[0].classList.add("anime-me2");
-    fa19[1].classList.add("anime-me3");
-    fa19[2].classList.add("anime-me4");
-    fa19[3].classList.add("anime-me");
-    fa19[4].classList.add("anime-me2");
-    fa19[5].classList.add("anime-me3");
-    fa19[6].classList.add("anime-me5");
-    fa19[7].classList.add("anime-me");
-    fa19[8].classList.add("anime-me4");
-    fa19[9].classList.add("anime-me3");
-    fa19[10].classList.add("anime-me5");
-    fa19[11].classList.add("anime-me");
-    fa19[12].classList.add("anime-me2");
-    fa19[13].classList.add("anime-me5");
+    // about
+    fa18.forEach(f=>{
+        f.classList.add("anime-me"+(Math.floor(Math.random()*5)+1));
+    })
+
+    fa19.forEach(f=>{
+        f.classList.add("anime-me"+(Math.floor(Math.random()*5)+1));
+    })
 
     let test18 = document.querySelector(".test18");
     let test19 = document.querySelector(".test19");
@@ -1438,74 +898,30 @@ function float9() {
     function playAniabout() {
         console.log("I work frank");
         hov18.classList.add("style");
-        fa18[0].classList.remove("op0");
-        fa18[1].classList.remove("op0");
-        fa18[2].classList.remove("op0");
-        fa18[3].classList.remove("op0");
-        fa18[4].classList.remove("op0");
-        fa18[5].classList.remove("op0");
-        fa18[6].classList.remove("op0");
-        fa18[7].classList.remove("op0");
-        fa18[8].classList.remove("op0");
-        fa18[9].classList.remove("op0");
-        fa18[10].classList.remove("op0");
-        fa18[11].classList.remove("op0");
-        fa18[12].classList.remove("op0");
-        fa18[13].classList.remove("op0");
+        fa18.forEach(f=>{
+    f.classList.remove("op0");
+    })
     }
 
     function StopAniabout() {
         hov18.classList.remove("style");
-        fa18[0].classList.add("op0");
-        fa18[1].classList.add("op0");
-        fa18[2].classList.add("op0");
-        fa18[3].classList.add("op0");
-        fa18[4].classList.add("op0");
-        fa18[5].classList.add("op0");
-        fa18[6].classList.add("op0");
-        fa18[7].classList.add("op0");
-        fa18[8].classList.add("op0");
-        fa18[9].classList.add("op0");
-        fa18[10].classList.add("op0");
-        fa18[11].classList.add("op0");
-        fa18[12].classList.add("op0");
-        fa18[13].classList.add("op0");
+        fa18.forEach(f=>{
+    f.classList.add("op0");
+    })
     }
 
     function playAni2about() {
         hov19.classList.add("style");
-        fa19[0].classList.remove("op0");
-        fa19[1].classList.remove("op0");
-        fa19[2].classList.remove("op0");
-        fa19[3].classList.remove("op0");
-        fa19[4].classList.remove("op0");
-        fa19[5].classList.remove("op0");
-        fa19[6].classList.remove("op0");
-        fa19[7].classList.remove("op0");
-        fa19[8].classList.remove("op0");
-        fa19[9].classList.remove("op0");
-        fa19[10].classList.remove("op0");
-        fa19[11].classList.remove("op0");
-        fa19[12].classList.remove("op0");
-        fa19[13].classList.remove("op0");
+        fa19.forEach(f=>{
+    f.classList.remove("op0");
+    })
     }
 
     function StopAni2about() {
         hov19.classList.remove("style");
-        fa19[0].classList.add("op0");
-        fa19[1].classList.add("op0");
-        fa19[2].classList.add("op0");
-        fa19[3].classList.add("op0");
-        fa19[4].classList.add("op0");
-        fa19[5].classList.add("op0");
-        fa19[6].classList.add("op0");
-        fa19[7].classList.add("op0");
-        fa19[8].classList.add("op0");
-        fa19[9].classList.add("op0");
-        fa19[10].classList.add("op0");
-        fa19[11].classList.add("op0");
-        fa19[12].classList.add("op0");
-        fa19[13].classList.add("op0");
+        fa19.forEach(f=>{
+    f.classList.add("op0");
+    })
     }
 };
 
@@ -1565,13 +981,25 @@ test14.addEventListener("click", function(){
 
 test15.addEventListener("click",function(){
     window.location.href = "../documentation/frankenstein/story-board-and-personas-collage.pdf";
-});*/
+});
 
-/*
+
 //font awesome iocons dissapear on text hover//
 
 let freeze = document.querySelectorAll(".freeze");
 
+    freeze.forEach(function (e) {
+e.addEventListener("mouseenter", () => {
+    ("fa"+(Math.floor(Math.random()*5)+1)).classList.add("opacity0");
+})
+    })
+    freeze.forEach(function (e) {
+e.addEventListener("mouseleave", () => {
+     ("fa"+(Math.floor(Math.random()*5)+1)).classList.add("opacity1");
+})
+    })
+
+/*
 freeze[0].addEventListener('mouseenter', opacity0);
 freeze[0].addEventListener('mouseleave', opacity1);
 freeze[1].addEventListener('mouseenter', opacity0two);
@@ -1581,8 +1009,7 @@ freeze[2].addEventListener('mouseleave', opacity1);
 freeze[3].addEventListener('mouseenter', opacity0two);
 freeze[3].addEventListener('mouseleave', opacity1two);
 
-function opacity0() {
-    if (activateScale6 == 0) {
+function opacity0() { {
     fa3[0].classList.add("op0");
     fa3[1].classList.add("op0");
     fa3[2].classList.add("op0");
