@@ -97,23 +97,24 @@ function myFunction() {
 }
 
 //Contact me text animation//
-let c4 = document.getElementById("c4");
-let o4 = document.getElementById("o4");
-let n4 = document.getElementById("n4");
-let t4 = document.getElementById("t4");
-let a4 = document.getElementById("a4");
-let c44 = document.getElementById("c44");
-let t44 = document.getElementById("t4");
-let space4 = document.getElementById("space4");
-let m4 = document.getElementById("m4");
-let e4 = document.getElementById("e4");
+let l1 = document.getElementById("c4");
+let l2 = document.getElementById("o4");
+let l3 = document.getElementById("n4");
+let l4 = document.getElementById("t4");
+let l5 = document.getElementById("a4");
+let l6 = document.getElementById("c44");
+let l7 = document.getElementById("t4");
+let l8 = document.getElementById("space4");
+let l9 = document.getElementById("m4");
+let l10 = document.getElementById("e4");
 
 let wraplet2 = document.querySelector(".wrapper-letters2");
 
 wraplet2.addEventListener('mouseenter', aniLetter2);
 
 function aniLetter2() {
-    console.log("works");
+
+
     setTimeout(function () {
         c4.classList.add("animate-letter");
     }, 100);
@@ -178,8 +179,8 @@ function aniLetter2() {
             e4.classList.remove("animate-letter");
         }, 1000);
     }, 900);
-}
 
+}
 // when hover image change the color of the text//
 
 
@@ -201,8 +202,6 @@ imgH.addEventListener("mouseleave", () => {
     takeBreak.classList.remove("green-me");
 })
     })
-
-
 
 //typewriting effect//
 var about = document.getElementById("about");
@@ -337,7 +336,7 @@ function typeWriter10() {
     }
 }
 
-// floating shapes animation inside square 3 and 4//
+// floating font awesome animation inside square 3 and 4//
 let fa3 = document.querySelectorAll(".fa3");
 let fa2 = document.querySelectorAll(".fa2");
 let fa4 = document.querySelectorAll(".fa4");
@@ -575,7 +574,7 @@ function float3() {
     test4.addEventListener('mouseleave', StopAni2misschili);
 
     function playAnimisschili() {
-        console.log("I work");
+
         hov3.classList.add("style");
         fa6.forEach(f=>f.classList.remove("op0"))
     }
@@ -627,7 +626,7 @@ function float4() {
     function playAnimenu() {
 
 
-        console.log("I work menu");
+
         hov8.classList.add("style");
         fa8.forEach(f=>{
     f.classList.remove("op0");
@@ -681,7 +680,7 @@ function float5() {
     test11.addEventListener('mouseleave', StopAni2drum);
 
     function playAnidrum() {
-        console.log("I work menu");
+
         hov10.classList.add("style");
         fa10.forEach(f=>{
     f.classList.remove("op0");
@@ -735,7 +734,7 @@ function float6() {
     test13.addEventListener('mouseleave', StopAni2frank);
 
     function playAnifrank() {
-        console.log("I work frank");
+
         hov12.classList.add("style");
         fa12.forEach(f=>{
     f.classList.remove("op0");
@@ -788,7 +787,7 @@ function float7() {
     test15.addEventListener('mouseleave', StopAni2view);
 
     function playAniview() {
-        console.log("I work frank");
+
         hov14.classList.add("style");
         fa14.forEach(f=>{
     f.classList.remove("op0");
@@ -843,7 +842,7 @@ function float8() {
     test17.addEventListener('mouseleave', StopAni2vid);
 
     function playAnivid() {
-        console.log("I work frank");
+
         hov16.classList.add("style");
         fa16.forEach(f=>{
     f.classList.remove("op0");
@@ -878,7 +877,7 @@ let hov19 = document.querySelector(".hov19");
 about.addEventListener("transitionend", float9);
 
 function float9() {
-    console.log("about")
+
     // about
     fa18.forEach(f=>{
         f.classList.add("anime-me"+(Math.floor(Math.random()*5)+1));
@@ -896,7 +895,7 @@ function float9() {
     test19.addEventListener('mouseleave', StopAni2about);
 
     function playAniabout() {
-        console.log("I work frank");
+
         hov18.classList.add("style");
         fa18.forEach(f=>{
     f.classList.remove("op0");
@@ -981,154 +980,4 @@ test14.addEventListener("click", function(){
 
 test15.addEventListener("click",function(){
     window.location.href = "../documentation/frankenstein/story-board-and-personas-collage.pdf";
-});
-
-
-//font awesome iocons dissapear on text hover//
-
-let freeze = document.querySelectorAll(".freeze");
-
-    freeze.forEach(function (e) {
-e.addEventListener("mouseenter", () => {
-    ("fa"+(Math.floor(Math.random()*5)+1)).classList.add("opacity0");
-})
-    })
-    freeze.forEach(function (e) {
-e.addEventListener("mouseleave", () => {
-     ("fa"+(Math.floor(Math.random()*5)+1)).classList.add("opacity1");
-})
-    })
-
-/*
-freeze[0].addEventListener('mouseenter', opacity0);
-freeze[0].addEventListener('mouseleave', opacity1);
-freeze[1].addEventListener('mouseenter', opacity0two);
-freeze[1].addEventListener('mouseleave', opacity1two);
-freeze[2].addEventListener('mouseenter', opacity0);
-freeze[2].addEventListener('mouseleave', opacity1);
-freeze[3].addEventListener('mouseenter', opacity0two);
-freeze[3].addEventListener('mouseleave', opacity1two);
-
-function opacity0() { {
-    fa3[0].classList.add("op0");
-    fa3[1].classList.add("op0");
-    fa3[2].classList.add("op0");
-    fa3[3].classList.add("op0");
-    fa3[4].classList.add("op0");
-    fa3[5].classList.add("op0");
-    fa3[6].classList.add("op0");
-    fa3[7].classList.add("op0");
-    fa3[8].classList.add("op0");
-    fa3[9].classList.add("op0");
-    fa3[10].classList.add("op0");
-    fa3[11].classList.add("op0");
-    fa3[12].classList.add("op0");
-    fa3[13].classList.add("op0");
-    fa5[0].classList.add("op0");
-    fa5[1].classList.add("op0");
-    fa5[2].classList.add("op0");
-    fa5[3].classList.add("op0");
-    fa5[4].classList.add("op0");
-    fa5[5].classList.add("op0");
-    fa5[6].classList.add("op0");
-    fa5[7].classList.add("op0");
-    fa5[8].classList.add("op0");
-    fa5[9].classList.add("op0");
-    fa5[10].classList.add("op0");
-    fa5[11].classList.add("op0");
-    fa5[12].classList.add("op0");
-    fa5[13].classList.add("op0");}}
-
-function opacity0two() {
-    if (activateScale7 == 0) {
-    fa2[0].classList.add("op0");
-    fa2[1].classList.add("op0");
-    fa2[2].classList.add("op0");
-    fa2[3].classList.add("op0");
-    fa2[4].classList.add("op0");
-    fa2[5].classList.add("op0");
-    fa2[6].classList.add("op0");
-    fa2[7].classList.add("op0");
-    fa2[8].classList.add("op0");
-    fa2[9].classList.add("op0");
-    fa2[10].classList.add("op0");
-    fa2[11].classList.add("op0");
-    fa2[12].classList.add("op0");
-    fa2[13].classList.add("op0");
-    fa6[0].classList.add("op0");
-    fa6[1].classList.add("op0");
-    fa6[2].classList.add("op0");
-    fa6[3].classList.add("op0");
-    fa6[4].classList.add("op0");
-    fa6[5].classList.add("op0");
-    fa6[6].classList.add("op0");
-    fa6[7].classList.add("op0");
-    fa6[8].classList.add("op0");
-    fa6[9].classList.add("op0");
-    fa6[10].classList.add("op0");
-    fa6[11].classList.add("op0");
-    fa6[12].classList.add("op0");
-    fa6[13].classList.add("op0"); }
-        }
-
-function opacity1() {
-    console.log("working")
-    fa3[0].classList.remove("op0");
-    fa3[1].classList.remove("op0");
-    fa3[2].classList.remove("op0");
-    fa3[3].classList.remove("op0");
-    fa3[4].classList.remove("op0");
-    fa3[5].classList.remove("op0");
-    fa3[6].classList.remove("op0");
-    fa3[7].classList.remove("op0");
-    fa3[8].classList.remove("op0");
-    fa3[9].classList.remove("op0");
-    fa3[10].classList.remove("op0");
-    fa3[11].classList.remove("op0");
-    fa3[12].classList.remove("op0");
-    fa3[13].classList.remove("op0");
-    fa5[0].classList.remove("op0");
-    fa5[1].classList.remove("op0");
-    fa5[2].classList.remove("op0");
-    fa5[3].classList.remove("op0");
-    fa5[4].classList.remove("op0");
-    fa5[5].classList.remove("op0");
-    fa5[6].classList.remove("op0");
-    fa5[7].classList.remove("op0");
-    fa5[8].classList.remove("op0");
-    fa5[9].classList.remove("op0");
-    fa5[10].classList.remove("op0");
-    fa5[11].classList.remove("op0");
-    fa5[12].classList.remove("op0");
-    fa5[13].classList.remove("op0");}
-
-function opacity1two() {
-    fa2[0].classList.remove("op0");
-    fa2[1].classList.remove("op0");
-    fa2[2].classList.remove("op0");
-    fa2[3].classList.remove("op0");
-    fa2[4].classList.remove("op0");
-    fa2[5].classList.remove("op0");
-    fa2[6].classList.remove("op0");
-    fa2[7].classList.remove("op0");
-    fa2[8].classList.remove("op0");
-    fa2[9].classList.remove("op0");
-    fa2[10].classList.remove("op0");
-    fa2[11].classList.remove("op0");
-    fa2[12].classList.remove("op0");
-    fa2[13].classList.remove("op0");
-    fa6[0].classList.remove("op0");
-    fa6[1].classList.remove("op0");
-    fa6[2].classList.remove("op0");
-    fa6[3].classList.remove("op0");
-    fa6[4].classList.remove("op0");
-    fa6[5].classList.remove("op0");
-    fa6[6].classList.remove("op0");
-    fa6[7].classList.remove("op0");
-    fa6[8].classList.remove("op0");
-    fa6[9].classList.remove("op0");
-    fa6[10].classList.remove("op0");
-    fa6[11].classList.remove("op0");
-    fa6[12].classList.remove("op0");
-    fa6[13].classList.remove("op0"); }
-*/
+});*/
